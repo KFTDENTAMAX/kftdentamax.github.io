@@ -1,171 +1,1076 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="KFT DENTAMAX — Dental supplies, equipment and materials in Bangladesh. Precision. Quality. Trust.">
-  <title>KFT DENTAMAX | Dental Supply Bangladesh</title>
-  <style>
-    :root{--black:#101014;--gold:#d8b45a;--gold2:#f1d991;--cream:#f8f6f0;--ink:#202027;--muted:#696974}
-    *{box-sizing:border-box;scroll-behavior:smooth}
-    body{margin:0;font-family:Arial,"Noto Sans Bengali",sans-serif;color:var(--ink);background:#fff;line-height:1.65}
-    a{color:inherit;text-decoration:none}
-    .topbar{background:#09090c;color:#e9e5d9;padding:8px 5%;font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    header{background:var(--black);color:#fff;padding:18px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid #393027}
-    .brand{display:flex;align-items:center;gap:13px}
-    .logo{height:52px;width:52px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold2);font-weight:900;letter-spacing:1px;font-size:16px}
-    .brand h1{font-size:22px;letter-spacing:2px;margin:0;color:var(--gold2)}
-    .brand small{display:block;color:#ddd;font-size:10px;letter-spacing:2.5px}
-    nav{display:flex;gap:20px;flex-wrap:wrap;font-size:14px}
-    nav a:hover{color:var(--gold2)}
-    .hero{background:radial-gradient(ellipse at 80% 20%,#393020 0,#17171b 35%,#0b0b0e 78%);color:#fff;padding:78px 6% 72px;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;min-height:450px}
-    .eyebrow{color:var(--gold2);letter-spacing:3px;text-transform:uppercase;font-size:12px;font-weight:bold}
-    .hero h2{font-size:clamp(34px,5vw,58px);line-height:1.12;margin:16px 0;color:#fff}
-    .hero h2 span{color:var(--gold2)}
-    .hero p{color:#e0dfe3;max-width:650px;font-size:17px}
-    .buttons{display:flex;gap:13px;flex-wrap:wrap;margin-top:26px}
-    .btn{display:inline-block;padding:12px 20px;border-radius:5px;font-weight:bold;font-size:14px}
-    .btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#17130a}
-    .btn-outline{border:1px solid var(--gold);color:var(--gold2)}
-    .hero-card{border:1px solid #74613b;background:linear-gradient(145deg,#242329,#111115);padding:28px;border-radius:14px;box-shadow:0 20px 55px #0008}
-    .hero-card .big{font-size:70px;text-align:center;margin:0 0 8px}
-    .hero-card h3{text-align:center;color:var(--gold2);letter-spacing:2px;margin:0}
-    .hero-card p{text-align:center;font-size:14px;margin-bottom:0}
-    section{padding:64px 6%}
-    .section-head{text-align:center;max-width:760px;margin:0 auto 35px}
-    .section-head .eyebrow{color:#997629}
-    .section-head h2{font-size:32px;margin:8px 0;color:#18181d}
-    .section-head p{color:var(--muted);margin:0}
-    .products{background:var(--cream)}
-    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-    .product{background:white;border:1px solid #e9e3d5;border-radius:10px;padding:22px 18px;transition:.2s;min-height:190px}
-    .product:hover{transform:translateY(-4px);box-shadow:0 12px 25px #1b1b1b12;border-color:var(--gold)}
-    .icon{width:48px;height:48px;border-radius:12px;background:#f4ecd6;display:grid;place-items:center;font-size:25px;margin-bottom:14px}
-    .product h3{font-size:17px;margin:0 0 7px}
-    .product p{font-size:13px;color:var(--muted);margin:0}
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
-    .about-panel{background:var(--black);color:white;border-radius:12px;padding:32px;border-left:4px solid var(--gold)}
-    .about-panel h3{color:var(--gold2);margin-top:0;font-size:24px}
-    .about-panel p{color:#e0dfe3}
-    .checks{padding:0;list-style:none}
-    .checks li{margin:12px 0}
-    .checks li:before{content:"✓";color:#a77d20;font-weight:bold;margin-right:10px}
-    .contact{background:#f8f6f0}
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
-    .contact-card{background:white;padding:25px;border:1px solid #e8e0d0;border-radius:10px}
-    .contact-card h3{margin-top:0}
-    .contact-line{margin:14px 0;overflow-wrap:anywhere}
-    .contact-line strong{display:block;font-size:12px;color:#927127;text-transform:uppercase;letter-spacing:1px}
-    .contact-line span{font-size:15px}
-    .cta{background:linear-gradient(120deg,#151519,#292318);color:white;text-align:center;padding:48px 6%}
-    .cta h2{margin:0 0 8px;font-size:30px;color:var(--gold2)}
-    .cta p{color:#e4e1d8}
-    footer{background:#09090c;color:#bbb;padding:24px 6%;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:12px}
-    footer strong{color:var(--gold2)}
-    .note{font-size:12px;color:#797985;margin-top:16px}
-    @media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:55px}.hero-card{max-width:520px}.grid{grid-template-columns:repeat(2,1fr)}nav{gap:12px}}
-    @media(max-width:600px){header{align-items:flex-start;flex-direction:column}.brand h1{font-size:19px}nav{font-size:13px}.hero{padding:45px 6%}.hero-card .big{font-size:55px}section{padding:48px 6%}.grid,.about-grid,.contact-grid{grid-template-columns:1fr}.section-head h2{font-size:27px}.topbar{font-size:11px}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KFT DENTAMAX | Premium Dental Supplies Bangladesh</title>
+
+<meta name="description" content="KFT DENTAMAX supplies dental burs, files, composites, endodontic materials, dental equipment and more across Bangladesh.">
+
+<meta name="theme-color" content="#0b0b0b">
+
+<style>
+:root {
+  --black: #0b0b0b;
+  --dark: #141414;
+  --gold: #d5ad58;
+  --gold-light: #f2d898;
+  --white: #ffffff;
+  --muted: #b8b8b8;
+  --border: rgba(213,173,88,.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--black);
+  color: var(--white);
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+.container {
+  width: min(1160px, 92%);
+  margin: auto;
+}
+
+.topbar {
+  background: #050505;
+  border-bottom: 1px solid var(--border);
+  color: var(--gold-light);
+  padding: 9px 0;
+  font-size: 13px;
+  text-align: center;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(11,11,11,.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  min-height: 82px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  color: var(--gold);
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.logo small {
+  display: block;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 4px;
+  margin-top: 5px;
+}
+
+nav {
+  display: flex;
+  gap: 23px;
+  align-items: center;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 1px solid var(--gold);
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .25s;
+  text-align: center;
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  color: #17120a;
+  border-color: var(--gold);
+}
+
+.btn-gold:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  color: var(--gold-light);
+}
+
+.btn-outline:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.hero {
+  padding: 90px 0 85px;
+  background:
+    radial-gradient(ellipse at 85% 20%, rgba(213,173,88,.13), transparent 38%),
+    linear-gradient(120deg, #0b0b0b, #17140e 65%, #0b0b0b);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  align-items: center;
+  gap: 55px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+  margin-bottom: 22px;
+}
+
+.hero h1 span {
+  color: var(--gold);
+}
+
+.hero p {
+  max-width: 610px;
+  color: #d0d0d0;
+  font-size: 17px;
+  margin-bottom: 28px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: linear-gradient(145deg, #1d1b16, #101010);
+  padding: 35px;
+  box-shadow: 0 25px 70px rgba(0,0,0,.35);
+}
+
+.hero-emblem {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 22px;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  display: grid;
+  place-items: center;
+  font-size: 31px;
+  font-weight: 900;
+  border-radius: 50%;
+}
+
+.hero-card h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.hero-card p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.trust-list {
+  list-style: none;
+}
+
+.trust-list li {
+  border-top: 1px solid var(--border);
+  padding: 11px 0;
+  font-size: 14px;
+}
+
+.trust-list li::before {
+  content: "✓";
+  color: var(--gold);
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+section {
+  padding: 76px 0;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 38px;
+}
+
+.section-head h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  margin-bottom: 12px;
+}
+
+.section-head p {
+  color: var(--muted);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: -1px;
+  border-bottom: 1px solid var(--border);
+}
+
+.stat {
+  text-align: center;
+  padding: 25px 10px;
+  border-right: 1px solid var(--border);
+}
+
+.stat strong {
+  display: block;
+  color: var(--gold);
+  font-size: 23px;
+}
+
+.stat span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.catalog {
+  background: #101010;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.toolbar input,
+.toolbar select {
+  width: 100%;
+  background: #191919;
+  color: white;
+  border: 1px solid #39342a;
+  border-radius: 6px;
+  padding: 14px;
+  outline: none;
+}
+
+.toolbar input:focus,
+.toolbar select:focus {
+  border-color: var(--gold);
+}
+
+.toolbar select option {
+  background: #191919;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product {
+  background: linear-gradient(145deg, #1a1a1a, #111111);
+  border: 1px solid #302b20;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: .25s;
+  display: flex;
+  flex-direction: column;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+  box-shadow: 0 15px 35px rgba(0,0,0,.25);
+}
+
+.product-art {
+  min-height: 160px;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(213,173,88,.17), transparent 55%),
+    #171613;
+  display: grid;
+  place-items: center;
+  border-bottom: 1px solid var(--border);
+  color: var(--gold);
+  font-size: 43px;
+}
+
+.product-art span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-align: center;
+  margin-top: 4px;
+  color: #e6d5ac;
+}
+
+.product-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.tag {
+  align-self: flex-start;
+  background: rgba(213,173,88,.12);
+  color: var(--gold-light);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  font-size: 11px;
+  padding: 4px 10px;
+  margin-bottom: 12px;
+}
+
+.product h3 {
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.product p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.price {
+  color: var(--gold-light);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.product .btn {
+  width: 100%;
+  font-size: 13px;
+}
+
+.empty {
+  display: none;
+  text-align: center;
+  color: var(--muted);
+  padding: 30px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.about-grid h2 {
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.about-grid p {
+  color: #c5c5c5;
+  margin-bottom: 20px;
+}
+
+.checks {
+  list-style: none;
+}
+
+.checks li {
+  padding: 8px 0;
+}
+
+.checks li::before {
+  content: "✓";
+  color: var(--gold);
+  margin-right: 12px;
+  font-weight: bold;
+}
+
+.about-panel {
+  padding: 30px;
+  border: 1px solid var(--border);
+  background: linear-gradient(145deg, #1b1914, #101010);
+  border-radius: 12px;
+}
+
+.about-panel h3 {
+  color: var(--gold-light);
+  font-size: 23px;
+  margin-bottom: 14px;
+}
+
+.about-panel p {
+  margin-bottom: 20px;
+}
+
+.contact {
+  background: #101010;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.contact-card {
+  padding: 28px;
+  border: 1px solid #332d20;
+  background: #151515;
+  border-radius: 10px;
+}
+
+.contact-card h3 {
+  color: var(--gold-light);
+  margin-bottom: 18px;
+  font-size: 22px;
+}
+
+.contact-card p {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.contact-line {
+  margin-bottom: 18px;
+  overflow-wrap: anywhere;
+}
+
+.contact-line strong {
+  display: block;
+  color: var(--gold);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.contact-line a:hover {
+  color: var(--gold);
+}
+
+.cta {
+  text-align: center;
+  background:
+    radial-gradient(ellipse at center, rgba(213,173,88,.13), transparent 65%),
+    #0b0b0b;
+  border-top: 1px solid var(--border);
+}
+
+.cta h2 {
+  font-size: clamp(27px, 4vw, 40px);
+  margin-bottom: 12px;
+}
+
+.cta p {
+  color: var(--muted);
+  margin-bottom: 25px;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 25px 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+footer strong {
+  color: var(--gold);
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 200;
+  background: #25d366;
+  color: #06190d;
+  border-radius: 50px;
+  padding: 14px 19px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 5px 25px rgba(0,0,0,.4);
+}
+
+.whatsapp-float:hover {
+  filter: brightness(1.08);
+}
+
+@media (max-width: 850px) {
+  .hero-grid,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero-card {
+    max-width: 600px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    gap: 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 580px) {
+  .nav {
+    padding: 17px 0;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  nav .btn {
+    padding: 8px 12px;
+  }
+
+  .logo {
+    font-size: 23px;
+  }
+
+  .hero h1 {
+    font-size: 39px;
+  }
+
+  .hero-card {
+    padding: 25px;
+  }
+
+  section {
+    padding: 55px 0;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat {
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid h2 {
+    font-size: 29px;
+  }
+
+  .contact-card {
+    padding: 22px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+  }
+
+  .whatsapp-float {
+    right: 12px;
+    bottom: 12px;
+    padding: 12px 15px;
+  }
+}
+</style>
 </head>
+
 <body>
-  <div class="topbar"><span>Dental Supply & Equipment | Bangladesh</span><span>Call: 01631268054 · Email: sonet189@gmail.com</span></div>
-  <header>
-    <a class="brand" href="#home" aria-label="KFT DENTAMAX Home">
-      <div class="logo">KFT</div>
-      <div><h1>KFT DENTAMAX</h1><small>PRECISION · QUALITY · TRUST</small></div>
+
+<div class="topbar">
+  Premium Dental Supplies in Bangladesh · Precision. Quality. Trust.
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home">
+      KFT DENTAMAX
+      <small>DENTAL SUPPLY</small>
     </a>
+
     <nav>
-      <a href="#home">Home</a><a href="#products">Products / পণ্য</a><a href="#about">About / পরিচিতি</a><a href="#contact">Contact / যোগাযোগ</a>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-gold" href="https://wa.me/8801631268054" target="_blank" rel="noopener">
+        WhatsApp Us
+      </a>
     </nav>
-  </header>
-  <main>
-    <section class="hero" id="home">
-      <div>
-        <div class="eyebrow">Your Trusted Dental Supply Partner</div>
-        <h2>Quality Dental Products.<br><span>Trusted Service.</span></h2>
-        <p>বাংলাদেশের ডেন্টাল ডাক্তার, ক্লিনিক ও ডেন্টাল প্রফেশনালদের জন্য নির্ভরযোগ্য ডেন্টাল সাপ্লাই এবং ইকুইপমেন্ট।</p>
-        <div class="buttons">
-          <a class="btn btn-gold" href="#products">Explore Products / পণ্য দেখুন</a>
-          <a class="btn btn-outline" href="https://wa.me/8801631268054" target="_blank" rel="noopener">WhatsApp Us / যোগাযোগ করুন</a>
-        </div>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div>
+      <div class="eyebrow">Your Trusted Dental Supply Partner</div>
+
+      <h1>
+        Quality Supplies.<br>
+        <span>Confident Dentistry.</span>
+      </h1>
+
+      <p>
+        Welcome to KFT DENTAMAX. We help dental professionals in Bangladesh
+        find dental materials, instruments and equipment with convenient
+        communication and customer-focused service.
+        <br><br>
+        ডেন্টাল পণ্য ও প্রয়োজনীয় যন্ত্রপাতির জন্য আমাদের সঙ্গে যোগাযোগ করুন।
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#products">Explore Products ↓</a>
+
+        <a class="btn btn-outline"
+           href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20I%20want%20to%20know%20about%20your%20dental%20products."
+           target="_blank" rel="noopener">
+          Get a Price
+        </a>
       </div>
-      <div class="hero-card">
-        <div class="big">🦷</div>
+    </div>
+
+    <div class="hero-card">
+      <div class="hero-emblem">KFT</div>
+
+      <div class="eyebrow">KFT DENTAMAX</div>
+
+      <h2>Precision. Quality. Trust.</h2>
+
+      <p>
+        Your dental supply partner in Bangladesh.
+        পেশাদার ডেন্টাল সাপ্লাই, সহজ যোগাযোগ।
+      </p>
+
+      <ul class="trust-list">
+        <li>Multiple Dental Product Categories</li>
+        <li>Customer-Focused Communication</li>
+        <li>Price & Availability on Request</li>
+        <li>Serving Dental Professionals in Bangladesh</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<div class="container stats">
+  <div class="stat">
+    <strong>Dental Materials</strong>
+    <span>Everyday clinical essentials</span>
+  </div>
+
+  <div class="stat">
+    <strong>Dental Equipment</strong>
+    <span>Equipment and instruments</span>
+  </div>
+
+  <div class="stat">
+    <strong>Easy Contact</strong>
+    <span>Phone, email and WhatsApp</span>
+  </div>
+</div>
+
+<section class="catalog" id="products">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">Product Catalogue</div>
+      <h2>Explore Our Dental Products</h2>
+      <p>
+        আপনার প্রয়োজনীয় পণ্য খুঁজুন। দাম ও স্টক জানতে WhatsApp-এ যোগাযোগ করুন।
+      </p>
+    </div>
+
+    <div class="toolbar">
+      <input
+        type="search"
+        id="search"
+        placeholder="Search products... / পণ্য খুঁজুন"
+        aria-label="Search dental products">
+
+      <select id="category" aria-label="Filter by category">
+        <option value="all">All Categories</option>
+        <option value="burs">Dental Burs</option>
+        <option value="files">Endodontic Files</option>
+        <option value="restorative">GI & Composite</option>
+        <option value="equipment">Dental Equipment</option>
+        <option value="imaging">X-ray & Imaging</option>
+        <option value="endodontic">Root Canal Materials</option>
+        <option value="handpiece">Dental Handpiece</option>
+        <option value="impression">Impression Materials</option>
+      </select>
+    </div>
+
+    <div class="product-grid" id="productGrid">
+
+      <article class="product" data-category="burs">
+        <div class="product-art">✦<span>DIAMOND BURS</span></div>
+        <div class="product-body">
+          <span class="tag">Dental Burs</span>
+          <h3>Diamond Burs</h3>
+          <p>Dental diamond burs in different shapes and sizes. Ask about available models.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20Diamond%20Burs%20models%20and%20prices."
+             target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+      <article class="product" data-category="files">
+        <div class="product-art">〰<span>ENDO FILES</span></div>
+        <div class="product-body">
+          <span class="tag">Endodontics</span>
+          <h3>K Files, H Files & Reamers</h3>
+          <p>Root canal hand instruments in different lengths and sizes. Confirm stock before ordering.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20I%20want%20to%20know%20K%20Files%2C%20H%20Files%20and%20Reamers%20prices."
+             target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+      <article class="product" data-category="restorative">
+        <div class="product-art">◇<span>RESTORATIVE</span></div>
+        <div class="product-body">
+          <span class="tag">Restorative Materials</span>
+          <h3>Glass Ionomer Cement</h3>
+          <p>GI cement products for dental restorative applications. Contact us for brands and availability.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20GI%20Cement%20brands%20and%20prices."
+             target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+      <article class="product" data-category="restorative">
+        <div class="product-art">◈<span>COMPOSITE</span></div>
+        <div class="product-body">
+          <span class="tag">Restorative Materials</span>
+          <h3>Dental Composite</h3>
+          <p>Composite restorative materials. Ask about shades, brands and current stock.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20Dental%20Composite%20brands%20and%20prices."
+             target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+      <article class="product" data-category="equipment">
+        <div class="product-art">⚙<span>DENTAL EQUIPMENT</span></div>
+        <div class="product-body">
+          <span class="tag">Dental Equipment</span>
+          <h3>Endo Motor & Apex Locator</h3>
+          <p>Equipment for endodontic procedures. Request model details and availability.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20I%20want%20details%20and%20prices%20for%20Endo%20Motors%20and%20Apex%20Locators."
+             target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+      <article class="product" data-category="imaging">
+        <div class="product-art">▣<span>DENTAL IMAGING</span></div>
+        <div class="product-body">
+          <span class="tag">X-ray & Imaging</span>
+          <h3>Dental X-ray & RVG</h3>
+          <p>Dental imaging equipment. Contact us for specifications, accessories and service details.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20Dental%20X-ray%20and%20RVG%20details%20and%20prices."
+             target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+      <article class="product" data-category="endodontic">
+        <div class="product-art">＋<span>ROOT CANAL</span></div>
+        <div class="product-body">
+          <span class="tag">Endodontics</span>
+          <h3>Root Canal Materials</h3>
+          <p>Paper points, gutta-percha points, EDTA, sodium hypochlorite and other endodontic materials.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20Root%20Canal%20Materials%20and%20prices."
+             target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+      <article class="product" data-category="handpiece">
+        <div class="product-art">⚒<span>HANDPIECES</span></div>
+        <div class="product-body">
+          <span class="tag">Dental Instruments</span>
+          <h3>Dental Handpiece</h3>
+          <p>Dental handpieces and related accessories. Ask about available models and compatibility.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20Dental%20Handpiece%20models%20and%20prices."
+             target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+      <article class="product" data-category="impression">
+        <div class="product-art">◎<span>IMPRESSION</span></div>
+        <div class="product-body">
+          <span class="tag">Impression Materials</span>
+          <h3>Dental Impression Materials</h3>
+          <p>Alginate and other impression materials. Contact us to check available brands and sizes.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20Dental%20Impression%20Materials%20and%20prices."
+             target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="empty" id="emptyMessage">
+      No matching products found. অন্য শব্দ দিয়ে খুঁজে দেখুন।
+    </div>
+
+    <p style="text-align:center;color:#999;font-size:12px;margin-top:25px">
+      Product availability and prices may change. Please contact KFT DENTAMAX to confirm.
+    </p>
+
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about-grid">
+
+    <div>
+      <div class="eyebrow">About KFT DENTAMAX</div>
+
+      <h2>Precision.<br><span style="color:var(--gold)">Quality. Trust.</span></h2>
+
+      <p>
+        KFT DENTAMAX is a dental supply business serving dental professionals
+        in Bangladesh. আমাদের লক্ষ্য হলো মানসম্মত ডেন্টাল পণ্য, সহযোগিতাপূর্ণ
+        সার্ভিস এবং সহজ যোগাযোগের মাধ্যমে গ্রাহকদের পাশে থাকা।
+      </p>
+
+      <ul class="checks">
+        <li>Dental products in multiple categories</li>
+        <li>Customer-focused support / গ্রাহকসেবায় গুরুত্ব</li>
+        <li>বাংলাদেশজুড়ে পণ্য সরবরাহের বিষয়ে যোগাযোগ করুন</li>
+      </ul>
+    </div>
+
+    <div class="about-panel">
+      <h3>For Dentists & Clinics</h3>
+
+      <p>
+        আপনার প্রয়োজনীয় পণ্যের নাম, quantity এবং location আমাদের জানান।
+        আমরা availability ও price সম্পর্কে আপনাকে জানাতে পারব।
+      </p>
+
+      <a class="btn btn-gold"
+         href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20I%20want%20to%20know%20about%20your%20dental%20products."
+         target="_blank" rel="noopener">
+        Ask for Price / দাম জানতে
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">Get in Touch</div>
+      <h2>Contact Us / যোগাযোগ করুন</h2>
+      <p>পণ্যের দাম, স্টক বা অর্ডার সম্পর্কে জানতে আমাদের সঙ্গে যোগাযোগ করুন।</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
         <h3>KFT DENTAMAX</h3>
-        <p>Dental Supplies · Materials · Equipment<br>আপনার ডেন্টাল সাপ্লাইয়ের বিশ্বস্ত সহযোগী</p>
-      </div>
-    </section>
 
-    <section class="products" id="products">
-      <div class="section-head">
-        <div class="eyebrow">Our Product Range</div>
-        <h2>Dental Products / আমাদের পণ্য</h2>
-        <p>Explore our main product categories. পণ্যের দাম, স্টক ও বিস্তারিত জানতে সরাসরি যোগাযোগ করুন।</p>
-      </div>
-      <div class="grid">
-        <article class="product"><div class="icon">💎</div><h3>Dental Diamond Burs</h3><p>ডেন্টাল প্রিপারেশন ও ক্লিনিক্যাল কাজের জন্য বিভিন্ন ধরনের burs.</p></article>
-        <article class="product"><div class="icon">〰️</div><h3>Dental Files & Reamers</h3><p>K-files, H-files, reamers ও endodontic products.</p></article>
-        <article class="product"><div class="icon">🦷</div><h3>Dental Handpieces</h3><p>ডেন্টাল হ্যান্ডপিস ও প্রয়োজনীয় accessories.</p></article>
-        <article class="product"><div class="icon">🧪</div><h3>GI & Composite</h3><p>Restorative materials এবং dental consumables.</p></article>
-        <article class="product"><div class="icon">⚙️</div><h3>Endo Motor & Apex Locator</h3><p>Endodontic equipment ও সংশ্লিষ্ট পণ্য.</p></article>
-        <article class="product"><div class="icon">📷</div><h3>RVG & X-ray Machine</h3><p>Dental imaging equipment ও accessories.</p></article>
-        <article class="product"><div class="icon">🧴</div><h3>Impression Materials</h3><p>Dental impression materials ও related supplies.</p></article>
-        <article class="product"><div class="icon">🛠️</div><h3>Dental Equipment</h3><p>ক্লিনিকের প্রয়োজনীয় বিভিন্ন ডেন্টাল ইকুইপমেন্ট.</p></article>
-      </div>
-    </section>
+        <div class="contact-line">
+          <strong>Phone / ফোন</strong>
+          <span><a href="tel:+8801631268054">01631268054</a></span>
+        </div>
 
-    <section id="about">
-      <div class="about-grid">
-        <div>
-          <div class="eyebrow">About KFT DENTAMAX</div>
-          <h2 style="font-size:32px;margin:8px 0 14px">Precision. Quality. Trust.</h2>
-          <p>KFT DENTAMAX is a dental supply business serving dental professionals in Bangladesh. আমাদের লক্ষ্য হলো মানসম্মত ডেন্টাল পণ্য, সহযোগিতাপূর্ণ সার্ভিস এবং সহজ যোগাযোগের মাধ্যমে গ্রাহকদের পাশে থাকা।</p>
-          <ul class="checks">
-            <li>Dental products in multiple categories</li>
-            <li>Customer-focused support / গ্রাহকসেবায় গুরুত্ব</li>
-            <li>বাংলাদেশজুড়ে পণ্য সরবরাহের বিষয়ে যোগাযোগ করুন</li>
-          </ul>
+        <div class="contact-line">
+          <strong>Email / ইমেইল</strong>
+          <span><a href="mailto:sonet189@gmail.com">sonet189@gmail.com</a></span>
         </div>
-        <div class="about-panel">
-          <h3>For Dentists & Clinics</h3>
-          <p>আপনার প্রয়োজনীয় পণ্যের নাম, quantity এবং location আমাদের জানান। আমরা availability ও price সম্পর্কে আপনাকে জানাতে পারব।</p>
-          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20I%20want%20to%20know%20about%20your%20dental%20products." target="_blank" rel="noopener">Ask for Price / দাম জানতে</a>
-        </div>
-      </div>
-    </section>
 
-    <section class="contact" id="contact">
-      <div class="section-head">
-        <div class="eyebrow">Get in Touch</div>
-        <h2>Contact Us / যোগাযোগ করুন</h2>
-        <p>পণ্যের দাম, স্টক বা অর্ডার সম্পর্কে জানতে আমাদের সঙ্গে যোগাযোগ করুন।</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h3>KFT DENTAMAX</h3>
-          <div class="contact-line"><strong>Phone / ফোন</strong><span><a href="tel:+8801631268054">01631268054</a></span></div>
-          <div class="contact-line"><strong>Email / ইমেইল</strong><span><a href="mailto:sonet189@gmail.com">sonet189@gmail.com</a></span></div>
-          <div class="contact-line"><strong>Address / ঠিকানা</strong><span>Manikganj Bus Stand, Pouro Super Market, 3rd Floor, Bangladesh<br>মানিকগঞ্জ বাসস্ট্যান্ড, পৌর সুপার মার্কেট, ৩য় তলা</span></div>
-          <a class="btn btn-gold" href="https://wa.me/8801631268054" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        <div class="contact-line">
+          <strong>Address / ঠিকানা</strong>
+          <span>
+            Manikganj Bus Stand, Pouro Super Market, 3rd Floor, Bangladesh
+            <br>
+            মানিকগঞ্জ বাসস্ট্যান্ড, পৌর সুপার মার্কেট, ৩য় তলা
+          </span>
         </div>
-        <div class="contact-card">
-          <h3>Send an Inquiry / পণ্যের তথ্য জানতে</h3>
-          <p>WhatsApp-এ পণ্যের নাম ও পরিমাণ লিখে পাঠান।</p>
-          <div class="buttons">
-            <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20product%20details%20and%20prices." target="_blank" rel="noopener">Product Details</a>
-            <a class="btn" style="border:1px solid #d6d0c3" href="mailto:sonet189@gmail.com?subject=KFT%20DENTAMAX%20Product%20Inquiry">Email Us</a>
-          </div>
-          <p class="note">Note: এই ওয়েবসাইটটি প্রাথমিক demo। প্রকাশের আগে যোগাযোগের তথ্য, পণ্যের ছবি এবং অন্যান্য তথ্য যাচাই করে নিন।</p>
+
+        <a class="btn btn-gold"
+           href="https://wa.me/8801631268054"
+           target="_blank" rel="noopener">
+          Chat on WhatsApp
+        </a>
+      </div>
+
+      <div class="contact-card">
+        <h3>Send an Inquiry / পণ্যের তথ্য জানতে</h3>
+
+        <p>
+          WhatsApp-এ পণ্যের নাম ও পরিমাণ লিখে পাঠান।
+          আমরা বর্তমান দাম ও availability জানাতে সহায়তা করব।
+        </p>
+
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <a class="btn btn-gold"
+             href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20product%20details%20and%20prices."
+             target="_blank" rel="noopener">
+            Product Details
+          </a>
+
+          <a class="btn btn-outline"
+             href="mailto:sonet189@gmail.com?subject=KFT%20DENTAMAX%20Product%20Inquiry">
+            Email Us
+          </a>
         </div>
       </div>
-    </section>
-    <section class="cta">
-      <h2>Looking for Dental Supplies?</h2>
-      <p>আপনার ডেন্টাল পণ্যের প্রয়োজন জানাতে আজই যোগাযোগ করুন।</p>
-      <a class="btn btn-gold" href="https://wa.me/8801631268054" target="_blank" rel="noopener">Contact KFT DENTAMAX</a>
-    </section>
-  </main>
-  <footer><span>© <span id="year"></span> <strong>KFT DENTAMAX</strong>. All rights reserved.</span><span>Precision. Quality. Trust.</span></footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <div class="eyebrow">Your Dental Supply Partner</div>
+
+    <h2>Looking for Dental Supplies?</h2>
+
+    <p>আপনার ডেন্টাল পণ্যের প্রয়োজন জানাতে আজই যোগাযোগ করুন।</p>
+
+    <a class="btn btn-gold"
+       href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20I%20want%20to%20inquire%20about%20dental%20supplies."
+       target="_blank" rel="noopener">
+      Contact KFT DENTAMAX
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> <strong>KFT DENTAMAX</strong>. All rights reserved.</span>
+    <span>Precision. Quality. Trust.</span>
+  </div>
+</footer>
+
+<a class="whatsapp-float"
+   href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20I%20want%20to%20know%20about%20your%20dental%20products."
+   target="_blank" rel="noopener"
+   aria-label="Contact KFT DENTAMAX on WhatsApp">
+  WhatsApp ↗
+</a>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const searchInput = document.getElementById("search");
+const categorySelect = document.getElementById("category");
+const products = Array.from(document.querySelectorAll(".product"));
+const emptyMessage = document.getElementById("emptyMessage");
+
+function filterProducts() {
+  const query = searchInput.value.trim().toLowerCase();
+  const category = categorySelect.value;
+  let visibleCount = 0;
+
+  products.forEach(function(product) {
+    const text = product.innerText.toLowerCase();
+    const productCategory = product.dataset.category;
+
+    const matchesSearch = text.includes(query);
+    const matchesCategory = category === "all" || productCategory === category;
+    const show = matchesSearch && matchesCategory;
+
+    product.style.display = show ? "flex" : "none";
+
+    if (show) visibleCount++;
+  });
+
+  emptyMessage.style.display = visibleCount ? "none" : "block";
+}
+
+searchInput.addEventListener("input", filterProducts);
+categorySelect.addEventListener("change", filterProducts);
+</script>
+
 </body>
 </html>
