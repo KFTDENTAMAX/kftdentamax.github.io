@@ -12,12 +12,12 @@
 
 <style>
 :root {
-  --black: #0b0b0b;
-  --dark: #141414;
-  --gold: #d5ad58;
-  --gold-light: #f2d898;
+  --black: #111111;
+  --dark: #f5f6f8;
+  --gold: #b88a2b;
+  --gold-light: #e1c477;
   --white: #ffffff;
-  --muted: #b8b8b8;
+  --muted: #5f6670;
   --border: rgba(213,173,88,.25);
 }
 
@@ -648,6 +648,51 @@ footer strong {
     padding: 12px 15px;
   }
 }
+
+/* KFT DENTAMAX premium hybrid refresh */
+body { background:#f7f8fa; color:#20242a; }
+.topbar { background:#111111; color:#f0d58e; }
+header { background:rgba(255,255,255,.96); border-bottom:1px solid #e8dfca; }
+.logo { color:#a87919; }
+.logo small { color:#333943; }
+nav a { color:#252a31; }
+nav a:hover { color:#a87919; }
+.btn { border-radius:8px; font-weight:700; }
+.btn-gold { background:linear-gradient(135deg,#d9b45d,#b18325); color:#111!important; border:1px solid #c49a3a; box-shadow:0 5px 14px rgba(166,125,31,.14); }
+.btn-gold:hover { filter:brightness(1.04); transform:translateY(-1px); }
+.btn-outline { border:1px solid #b88a2b; color:#8b671b; background:#fff; }
+.hero { background:radial-gradient(circle at 85% 15%,rgba(217,180,93,.17),transparent 30%),linear-gradient(135deg,#fff 0%,#f4f5f7 68%,#f8f1df 100%); color:#20242a; }
+.hero h1, .hero h2 { color:#17191d; }
+.hero p { color:#545b65; }
+.hero .eyebrow, .section-kicker { color:#9a721c; }
+.hero-card, .hero-visual, .hero-panel { background:#fff; border:1px solid #eee3c8; box-shadow:0 18px 45px rgba(25,30,40,.08); }
+.stats, .trust-strip { background:#fff; border-top:1px solid #eee7d8; border-bottom:1px solid #eee7d8; }
+.stat strong { color:#a87919; }
+section { color:#20242a; }
+.catalog { background:#f7f8fa; }
+.section-heading h2, #about h2, .contact h2, .cta h2 { color:#181b20; }
+.section-heading p, #about p, .contact p { color:#606772; }
+.search-box input, .filter-select, select, input { background:#fff; color:#222; border:1px solid #dce0e5; border-radius:8px; }
+.product { background:#fff; border:1px solid #e5e7eb; box-shadow:0 8px 25px rgba(24,32,44,.045); border-radius:14px; overflow:hidden; }
+.product:hover { border-color:#d8bd78; box-shadow:0 15px 34px rgba(24,32,44,.09); }
+.product-art { background:linear-gradient(135deg,#17191d,#30343b); color:#e4c36f; }
+.product-body h3 { color:#20242a; }
+.product-body p { color:#626975; }
+#about { background:#fff; }
+#about li { color:#424852; }
+.contact { background:#f1f3f6; }
+.contact-card, .contact-box { background:#fff; border:1px solid #e3e6eb; border-radius:14px; }
+.cta { background:linear-gradient(120deg,#17191d,#292b30); color:#fff; }
+.cta h2, .cta p { color:#fff; }
+footer { background:#111; color:#f4f4f4; border-top:3px solid #b88a2b; }
+footer a { color:#f0d58e; }
+.floating-whatsapp { box-shadow:0 8px 24px rgba(0,0,0,.18); }
+@media (max-width:700px) {
+  .hero { padding-top:38px; }
+  .logo { font-size:22px; }
+  nav { gap:12px; }
+}
+
 </style>
 </head>
 
@@ -659,14 +704,10 @@ footer strong {
 
 <header>
   <div class="container nav">
-   <a class="logo" href="#home" style="display:flex; align-items:center; gap:12px;">
-<img src="KFT%20LOGO%20WEBSITE.png" alt="KFT DENTAMAX Logo"
-     style="width:75px; height:75px; object-fit:contain;">
-  <span>
-    KFT DENTAMAX
-    <small>DENTAL SUPPLY</small>
-  </span>
-</a>
+    <a class="logo" href="#home">
+      KFT DENTAMAX
+      <small>DENTAL SUPPLY</small>
+    </a>
 
     <nav>
       <a href="#home">Home</a>
