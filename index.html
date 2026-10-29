@@ -12,12 +12,12 @@
 
 <style>
 :root {
-  --black: #111111;
-  --dark: #f5f6f8;
-  --gold: #b88a2b;
-  --gold-light: #e1c477;
+  --black: #0b0b0b;
+  --dark: #141414;
+  --gold: #d5ad58;
+  --gold-light: #f2d898;
   --white: #ffffff;
-  --muted: #5f6670;
+  --muted: #b8b8b8;
   --border: rgba(213,173,88,.25);
 }
 
@@ -649,35 +649,34 @@ footer strong {
   }
 }
 
-/* KFT DENTAMAX premium hybrid refresh */
+/* KFT DENTAMAX Premium Hybrid refresh */
 body { background:#f7f8fa; color:#20242a; }
-.topbar { background:#111111; color:#f0d58e; }
-header { background:rgba(255,255,255,.96); border-bottom:1px solid #e8dfca; }
-.logo { color:#a87919; }
+.topbar { background:#111; color:#f0d58e; }
+header { background:rgba(255,255,255,.97); border-bottom:1px solid #e8dfca; }
+.logo { color:#a87919; display:flex; align-items:center; gap:10px; }
 .logo small { color:#333943; }
 nav a { color:#252a31; }
 nav a:hover { color:#a87919; }
 .btn { border-radius:8px; font-weight:700; }
-.btn-gold { background:linear-gradient(135deg,#d9b45d,#b18325); color:#111!important; border:1px solid #c49a3a; box-shadow:0 5px 14px rgba(166,125,31,.14); }
-.btn-gold:hover { filter:brightness(1.04); transform:translateY(-1px); }
+.btn-gold { background:linear-gradient(135deg,#e0c16f,#b18325); color:#111!important; border:1px solid #c49a3a; box-shadow:0 5px 14px rgba(166,125,31,.14); }
 .btn-outline { border:1px solid #b88a2b; color:#8b671b; background:#fff; }
 .hero { background:radial-gradient(circle at 85% 15%,rgba(217,180,93,.17),transparent 30%),linear-gradient(135deg,#fff 0%,#f4f5f7 68%,#f8f1df 100%); color:#20242a; }
 .hero h1, .hero h2 { color:#17191d; }
 .hero p { color:#545b65; }
-.hero .eyebrow, .section-kicker { color:#9a721c; }
-.hero-card, .hero-visual, .hero-panel { background:#fff; border:1px solid #eee3c8; box-shadow:0 18px 45px rgba(25,30,40,.08); }
-.stats, .trust-strip { background:#fff; border-top:1px solid #eee7d8; border-bottom:1px solid #eee7d8; }
+.hero .eyebrow, .section-head .eyebrow { color:#9a721c; }
+.hero-card { background:#fff; border:1px solid #eee3c8; box-shadow:0 18px 45px rgba(25,30,40,.08); color:#20242a; }
+.hero-card p, .hero-card li { color:#545b65; }
+.stats { background:#fff; border-top:1px solid #eee7d8; border-bottom:1px solid #eee7d8; }
 .stat strong { color:#a87919; }
-section { color:#20242a; }
 .catalog { background:#f7f8fa; }
-.section-heading h2, #about h2, .contact h2, .cta h2 { color:#181b20; }
-.section-heading p, #about p, .contact p { color:#606772; }
-.search-box input, .filter-select, select, input { background:#fff; color:#222; border:1px solid #dce0e5; border-radius:8px; }
+.section-head h2, #about h2, .contact h2, .cta h2 { color:#181b20; }
+.section-head p, #about p, .contact p { color:#606772; }
+.toolbar input, .toolbar select { background:#fff; color:#222; border:1px solid #dce0e5; border-radius:8px; }
 .product { background:#fff; border:1px solid #e5e7eb; box-shadow:0 8px 25px rgba(24,32,44,.045); border-radius:14px; overflow:hidden; }
 .product:hover { border-color:#d8bd78; box-shadow:0 15px 34px rgba(24,32,44,.09); }
 .product-art { background:linear-gradient(135deg,#17191d,#30343b); color:#e4c36f; }
 .product-body h3 { color:#20242a; }
-.product-body p { color:#626975; }
+.product-body p, .product .price { color:#626975; }
 #about { background:#fff; }
 #about li { color:#424852; }
 .contact { background:#f1f3f6; }
@@ -686,12 +685,20 @@ section { color:#20242a; }
 .cta h2, .cta p { color:#fff; }
 footer { background:#111; color:#f4f4f4; border-top:3px solid #b88a2b; }
 footer a { color:#f0d58e; }
-.floating-whatsapp { box-shadow:0 8px 24px rgba(0,0,0,.18); }
-@media (max-width:700px) {
-  .hero { padding-top:38px; }
-  .logo { font-size:22px; }
-  nav { gap:12px; }
+@media(max-width:700px) {
+ .hero { padding-top:38px; }
+ .logo img { width:54px!important;height:54px!important; }
+ nav { gap:12px; }
 }
+
+
+.highlighted-wrap { margin: 0 0 28px; }
+.highlighted-title { color: var(--gold-light); font-size: 16px; margin: 0 0 12px; letter-spacing: .4px; }
+.highlighted-cats { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:12px; margin-bottom:24px; }
+.highlight-cat { display:flex; align-items:center; min-height:72px; padding:15px 16px; border:1px solid var(--border); border-radius:10px; background:linear-gradient(135deg,#191919,#101010); color:var(--white); font-weight:700; text-align:left; cursor:pointer; transition:.2s; }
+.highlight-cat:hover,.highlight-cat:focus { border-color:var(--gold); transform:translateY(-2px); color:var(--gold-light); }
+.category-group-title { color:var(--gold-light); font-size:19px; margin:28px 0 10px; }
+@media(max-width:600px){.highlighted-cats{grid-template-columns:1fr 1fr}.highlight-cat{font-size:12px;padding:12px;min-height:68px}}
 
 </style>
 </head>
@@ -701,14 +708,13 @@ footer a { color:#f0d58e; }
 <div class="topbar">
   Premium Dental Supplies in Bangladesh · Precision. Quality. Trust.
 </div>
+
 <header>
   <div class="container nav">
-    <a class="logo" href="#home" style="display:flex; align-items:center; gap:10px;">
-      <img src="KFT%20LOGO%20WEBSITE.png"
-           alt="KFT DENTAMAX Logo"
-           style="width:70px; height:70px; object-fit:contain;">
-      <span>
-        KFT DENTAMAX
+    <a class="logo" href="#home" aria-label="KFT DENTAMAX Home">
+      <img src="KFT%20LOGO%20WEBSITE.png" alt="KFT DENTAMAX Logo"
+           style="width:64px;height:64px;object-fit:contain;">
+      <span>KFT DENTAMAX
         <small style="display:block;">PRECISION. QUALITY. TRUST.</small>
       </span>
     </a>
@@ -734,8 +740,8 @@ footer a { color:#f0d58e; }
       <div class="eyebrow">Your Trusted Dental Supply Partner</div>
 
       <h1>
-        Quality Supplies.<br>
-        <span>Confident Dentistry.</span>
+        Your Complete Dental<br>
+        <span>Supply Partner.</span>
       </h1>
 
       <p>
@@ -770,7 +776,7 @@ footer a { color:#f0d58e; }
       </p>
 
       <ul class="trust-list">
-        <li>Multiple Dental Product Categories</li>
+        <li>Wide Range of Dental Product Categories</li>
         <li>Customer-Focused Communication</li>
         <li>Price & Availability on Request</li>
         <li>Serving Dental Professionals in Bangladesh</li>
@@ -808,29 +814,76 @@ footer a { color:#f0d58e; }
       </p>
     </div>
 
-    <div class="toolbar">
-      <input
-        type="search"
-        id="search"
-        placeholder="Search products... / পণ্য খুঁজুন"
-        aria-label="Search dental products">
+    <div class="highlighted-wrap">
+      <h3 class="highlighted-title">Highlighted Categories</h3>
+      <div class="highlighted-cats">
+        <button class="highlight-cat" type="button" data-filter="gi-restorative">01. GI &amp; Restorative Materials</button>
+        <button class="highlight-cat" type="button" data-filter="impression">02. Dental Impression Materials</button>
+        <button class="highlight-cat" type="button" data-filter="endo-motor">03. Endo Motor &amp; Apex Locator</button>
+        <button class="highlight-cat" type="button" data-filter="xray-rvg">04. Dental X-Ray &amp; RVG</button>
+        <button class="highlight-cat" type="button" data-filter="composite">05. Composite Materials</button>
+        <button class="highlight-cat" type="button" data-filter="surgical-instruments">06. Surgical Items</button>
+      </div>
+    </div>
 
+    <h3 class="category-group-title">All Dental Products</h3>
+    <div class="toolbar">
+      <input type="search" id="search" placeholder="Search products... / পণ্য খুঁজুন" aria-label="Search dental products">
       <select id="category" aria-label="Filter by category">
         <option value="all">All Categories</option>
-        <option value="burs">Dental Burs</option>
-        <option value="files">Endodontic Files</option>
-        <option value="restorative">GI & Composite</option>
-        <option value="equipment">Dental Equipment</option>
-        <option value="imaging">X-ray & Imaging</option>
-        <option value="endodontic">Root Canal Materials</option>
-        <option value="handpiece">Dental Handpiece</option>
-        <option value="impression">Impression Materials</option>
+        <optgroup label="Highlighted Categories">
+          <option value="gi-restorative">GI &amp; Restorative Materials</option>
+          <option value="impression">Dental Impression Materials</option>
+          <option value="endo-motor">Endo Motor &amp; Apex Locator</option>
+          <option value="xray-rvg">Dental X-Ray &amp; RVG</option>
+          <option value="composite">Composite Materials</option>
+          <option value="surgical-instruments">Surgical Items</option>
+        </optgroup>
+        <optgroup label="All Dental Products">
+          <option value="dental-burs">Dental Burs &amp; Rotary Instruments</option>
+          <option value="dental-instruments">Dental Instruments</option>
+          <option value="endo-files">Endodontic Files &amp; Reamers</option>
+          <option value="root-canal">Root Canal Materials — GP Point, Paper Point, EDTA, Sodium Hypochlorite</option>
+          <option value="dental-cements">Dental Cements &amp; Luting Materials — Zinc Oxide, Eugenol, Luting Cement</option>
+          <option value="handpieces">Dental Handpieces &amp; Accessories</option>
+          <option value="endo-accessories">Endodontic Accessories — Endo Activator, Irrigation Tips</option>
+          <option value="dental-equipment">Dental Equipment — Light Cure, অন্যান্য যন্ত্রপাতি</option>
+          <option value="periodontics">Periodontics &amp; Scaling</option>
+          <option value="sterilization">Sterilization &amp; Infection Control</option>
+          <option value="disposable">Disposable Dental Supplies</option>
+          <option value="anesthesia">Dental Anesthesia &amp; Injection Supplies</option>
+          <option value="orthodontics">Orthodontic Supplies</option>
+          <option value="prosthodontics">Prosthodontics &amp; Denture Materials</option>
+          <option value="implants">Dental Implant Systems</option>
+          <option value="pediatric">Pediatric Dentistry</option>
+          <option value="oral-care">Preventive &amp; Oral Care Products</option>
+          <option value="clinic-equipment">Dental Clinic Equipment &amp; Furniture</option>
+          <option value="dental-consumables">Dental Consumables &amp; Accessories</option>
+        </optgroup>
+        <optgroup label="Medical & Healthcare">
+          <option value="medical-equipment">Medical Equipment &amp; Devices</option>
+          <option value="respiratory">Nebulizers &amp; Respiratory Care</option>
+          <option value="monitoring">Blood Pressure &amp; Monitoring Devices</option>
+          <option value="mobility">Wheelchairs &amp; Mobility Aids</option>
+          <option value="heating">Hot Water Bags &amp; Heating Products</option>
+          <option value="patient-care">Patient Care &amp; Home Healthcare</option>
+          <option value="diagnostic">Diagnostic &amp; Medical Equipment</option>
+          <option value="medical-consumables">Medical Consumables &amp; Accessories</option>
+          <option value="first-aid">First Aid &amp; Emergency Supplies</option>
+        </optgroup>
+        <optgroup label="Surgical Products">
+          <option value="surgical-instruments">Surgical Instruments &amp; Supplies</option>
+          <option value="surgical-dressings">Surgical Blades, Sutures &amp; Dressings</option>
+          <option value="surgical-trays">Surgical Trays &amp; Instrument Accessories</option>
+          <option value="surgical-sterilization">Surgical Sterilization Supplies</option>
+          <option value="other-surgical">Other Surgical &amp; Hospital Supplies</option>
+        </optgroup>
       </select>
     </div>
 
     <div class="product-grid" id="productGrid">
 
-      <article class="product" data-category="burs">
+      <article class="product" data-category="dental-burs">
         <div class="product-art">✦<span>DIAMOND BURS</span></div>
         <div class="product-body">
           <span class="tag">Dental Burs</span>
@@ -842,7 +895,7 @@ footer a { color:#f0d58e; }
         </div>
       </article>
 
-      <article class="product" data-category="files">
+      <article class="product" data-category="endo-files">
         <div class="product-art">〰<span>ENDO FILES</span></div>
         <div class="product-body">
           <span class="tag">Endodontics</span>
@@ -854,7 +907,7 @@ footer a { color:#f0d58e; }
         </div>
       </article>
 
-      <article class="product" data-category="restorative">
+      <article class="product" data-category="gi-restorative">
         <div class="product-art">◇<span>RESTORATIVE</span></div>
         <div class="product-body">
           <span class="tag">Restorative Materials</span>
@@ -866,7 +919,7 @@ footer a { color:#f0d58e; }
         </div>
       </article>
 
-      <article class="product" data-category="restorative">
+      <article class="product" data-category="gi-restorative">
         <div class="product-art">◈<span>COMPOSITE</span></div>
         <div class="product-body">
           <span class="tag">Restorative Materials</span>
@@ -878,7 +931,7 @@ footer a { color:#f0d58e; }
         </div>
       </article>
 
-      <article class="product" data-category="equipment">
+      <article class="product" data-category="endo-motor">
         <div class="product-art">⚙<span>DENTAL EQUIPMENT</span></div>
         <div class="product-body">
           <span class="tag">Dental Equipment</span>
@@ -890,7 +943,7 @@ footer a { color:#f0d58e; }
         </div>
       </article>
 
-      <article class="product" data-category="imaging">
+      <article class="product" data-category="xray-rvg">
         <div class="product-art">▣<span>DENTAL IMAGING</span></div>
         <div class="product-body">
           <span class="tag">X-ray & Imaging</span>
@@ -902,7 +955,7 @@ footer a { color:#f0d58e; }
         </div>
       </article>
 
-      <article class="product" data-category="endodontic">
+      <article class="product" data-category="root-canal">
         <div class="product-art">＋<span>ROOT CANAL</span></div>
         <div class="product-body">
           <span class="tag">Endodontics</span>
@@ -914,7 +967,7 @@ footer a { color:#f0d58e; }
         </div>
       </article>
 
-      <article class="product" data-category="handpiece">
+      <article class="product" data-category="handpieces">
         <div class="product-art">⚒<span>HANDPIECES</span></div>
         <div class="product-body">
           <span class="tag">Dental Instruments</span>
@@ -935,6 +988,210 @@ footer a { color:#f0d58e; }
           <div class="price">Price: Request current price</div>
           <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20Dental%20Impression%20Materials%20and%20prices."
              target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+
+      <article class="product" data-category="composite">
+        <div class="product-art">◇<span>ETCH & BOND</span></div>
+        <div class="product-body">
+          <span class="tag">Etching & Bonding</span>
+          <h3>Dental Etching, Bonding & Adhesives</h3>
+          <p>Etching gel, bonding agents and related restorative materials.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20Dental%20Etching%2C%20Bonding%20and%20Adhesives%20details%20and%20prices." target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+
+      <article class="product" data-category="root-canal">
+        <div class="product-art">＋<span>GP POINTS</span></div>
+        <div class="product-body">
+          <span class="tag">Endodontics</span>
+          <h3>Gutta-Percha (GP) Points</h3>
+          <p>Different sizes and tapers available subject to current stock.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20Gutta%20Percha%20GP%20Points%20details%20and%20prices." target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+
+      <article class="product" data-category="root-canal">
+        <div class="product-art">〰<span>PAPER POINTS</span></div>
+        <div class="product-body">
+          <span class="tag">Endodontics</span>
+          <h3>Paper Points</h3>
+          <p>Root canal paper points in different sizes and tapers.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20Endodontic%20Paper%20Points%20details%20and%20prices." target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+
+      <article class="product" data-category="root-canal">
+        <div class="product-art">滴<span>EDTA</span></div>
+        <div class="product-body">
+          <span class="tag">Irrigation</span>
+          <h3>EDTA Solution & Gel</h3>
+          <p>EDTA products for endodontic procedures; ask for brands and sizes.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20EDTA%20products%20details%20and%20prices." target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+
+      <article class="product" data-category="root-canal">
+        <div class="product-art">＋<span>SODIUM HYPOCHLORITE</span></div>
+        <div class="product-body">
+          <span class="tag">Irrigation</span>
+          <h3>Sodium Hypochlorite</h3>
+          <p>Endodontic irrigation solution. Confirm concentration and availability.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20Sodium%20Hypochlorite%20details%20and%20prices." target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+
+      <article class="product" data-category="dental-cements">
+        <div class="product-art">◇<span>ZINC OXIDE</span></div>
+        <div class="product-body">
+          <span class="tag">Dental Materials</span>
+          <h3>Zinc Oxide</h3>
+          <p>Dental zinc oxide powder and related materials.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20Zinc%20Oxide%20details%20and%20prices." target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+
+      <article class="product" data-category="dental-cements">
+        <div class="product-art">◈<span>EUGENOL</span></div>
+        <div class="product-body">
+          <span class="tag">Dental Materials</span>
+          <h3>Eugenol</h3>
+          <p>Eugenol in available bottle sizes; ask for current stock.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20Eugenol%20details%20and%20prices." target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+
+      <article class="product" data-category="dental-cements">
+        <div class="product-art">◇<span>HYBOND & CEMENTS</span></div>
+        <div class="product-body">
+          <span class="tag">Dental Materials</span>
+          <h3>Dental Cements & Hybond</h3>
+          <p>Ask about Hybond and other dental cement options.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20Dental%20Cements%20and%20Hybond%20details%20and%20prices." target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+
+      <article class="product" data-category="gi-restorative">
+        <div class="product-art">◈<span>BEAUTIFIL</span></div>
+        <div class="product-body">
+          <span class="tag">Restorative</span>
+          <h3>Beautyfil Composite</h3>
+          <p>Ask about available shades, variants and stock.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20Beautyfil%20Composite%20details%20and%20prices." target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+
+      <article class="product" data-category="gi-restorative">
+        <div class="product-art">◇<span>BLUE GI</span></div>
+        <div class="product-body">
+          <span class="tag">Restorative</span>
+          <h3>Blue GI & Other GI</h3>
+          <p>Glass ionomer cement options; ask about brand and package size.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20Blue%20GI%20and%20Glass%20Ionomer%20Cement%20details%20and%20prices." target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+
+      <article class="product" data-category="impression">
+        <div class="product-art">◎<span>ALGINATE</span></div>
+        <div class="product-body">
+          <span class="tag">Impression</span>
+          <h3>Alginate Impression Material</h3>
+          <p>Alginate impression materials in available brands and sizes.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20Alginate%20Impression%20Material%20details%20and%20prices." target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+
+      <article class="product" data-category="root-canal">
+        <div class="product-art">＋<span>LSTR</span></div>
+        <div class="product-body">
+          <span class="tag">Endodontics</span>
+          <h3>LSTR Materials</h3>
+          <p>Ask about available LSTR-related materials and kits.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20LSTR%20materials%20details%20and%20prices." target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+
+      <article class="product" data-category="dental-instruments">
+        <div class="product-art">⚒<span>DENTAL INSTRUMENTS</span></div>
+        <div class="product-body">
+          <span class="tag">Instruments</span>
+          <h3>Dental Instruments</h3>
+          <p>Selected instruments for routine dental procedures; ask for availability.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20Dental%20Instruments%20details%20and%20prices." target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+
+      <article class="product" data-category="dental-consumables">
+        <div class="product-art">▣<span>CLINIC CONSUMABLES</span></div>
+        <div class="product-body">
+          <span class="tag">Consumables</span>
+          <h3>Dental Clinic Consumables</h3>
+          <p>Ask about available disposable and day-to-day clinic consumables.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20Dental%20Clinic%20Consumables%20details%20and%20prices." target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+
+      <article class="product" data-category="prosthodontics">
+        <div class="product-art">◇<span>DENTAL LAB</span></div>
+        <div class="product-body">
+          <span class="tag">Lab Materials</span>
+          <h3>Dental Lab Materials</h3>
+          <p>Selected dental laboratory materials; contact us for current availability.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20Dental%20Lab%20Materials%20details%20and%20prices." target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+
+      <article class="product" data-category="dental-consumables">
+        <div class="product-art">✦<span>SOCO • NSK • RUNYES</span></div>
+        <div class="product-body">
+          <span class="tag">Product Brands</span>
+          <h3>SOCO, NSK, Runyes & Other Brands</h3>
+          <p>Ask about available models, authenticity, warranty and current stock.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20SOCO%2C%20NSK%2C%20Runyes%20and%20other%20dental%20brands%20details%20and%20prices." target="_blank" rel="noopener">Ask for Price</a>
+        </div>
+      </article>
+
+
+      <article class="product" data-category="dental-equipment">
+        <div class="product-art">⚙<span>DENTAL EQUIPMENT</span></div>
+        <div class="product-body">
+          <span class="tag">Equipment</span>
+          <h3>Other Dental Equipment</h3>
+          <p>Contact us for available equipment, specifications and quotations.</p>
+          <div class="price">Price: Request current price</div>
+          <a class="btn btn-gold" href="https://wa.me/8801631268054?text=Hello%20KFT%20DENTAMAX%2C%20please%20share%20other%20dental%20equipment%20details%20and%20prices." target="_blank" rel="noopener">Ask for Price</a>
         </div>
       </article>
 
@@ -1116,6 +1373,14 @@ function filterProducts() {
 
   emptyMessage.style.display = visibleCount ? "none" : "block";
 }
+
+document.querySelectorAll(".highlight-cat").forEach(function(button) {
+  button.addEventListener("click", function() {
+    categorySelect.value = button.dataset.filter;
+    filterProducts();
+    document.getElementById("products").scrollIntoView({behavior:"smooth", block:"start"});
+  });
+});
 
 searchInput.addEventListener("input", filterProducts);
 categorySelect.addEventListener("change", filterProducts);
