@@ -85,6 +85,18 @@ body{background:#F4F7F5;padding-bottom:85px}
   <a href="#">🛒<br>Cart</a>
   <a href="https://wa.me/8801613268054">🚚<br>Track Order</a>
 </div>
-
+<script>
+window.addEventListener('load', function(){
+  document.querySelectorAll('*').forEach(function(e){
+    if(e.textContent.trim() === 'Highlighted Categories'){
+      let box = e.parentElement;
+      if(box) box.style.display = 'none';
+      // নিচের বক্সগুলোও লুকানো
+      let next = box.nextElementSibling;
+      if(next) next.style.display = 'none';
+    }
+  });
+});
+</script>
 </body>
 </html>
