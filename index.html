@@ -98,5 +98,17 @@ window.addEventListener('load', function(){
   });
 });
 </script>
+  <style>
+.price, .product-price, s, del { display:none !important; }
+</style>
+<script>
+window.addEventListener('load', function(){
+  document.querySelectorAll('*').forEach(function(e){
+    if(e.children.length === 0 && e.textContent.includes('৳')){
+      e.style.display = 'none';
+    }
+  });
+});
+</script>
 </body>
 </html>
