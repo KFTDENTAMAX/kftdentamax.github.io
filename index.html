@@ -53,49 +53,39 @@ body{background:#F4F7F5;padding-bottom:85px}
 </style>
 </head>
 <body>
-
-<!-- 1. LIVE + NUMBER - EKDOM UPORE -->
 <div style="background:#000;color:#fff;overflow:hidden;white-space:nowrap;padding:6px 0;font-size:13px;font-weight:bold;position:sticky;top:0;z-index:9999;">
 <marquee>🔴 LIVE : সারা বাংলাদেশে ক্যাশ অন ডেলিভারি চলছে | অর্ডার করতে কল করুন : 01631268054 | WhatsApp : 01631268054 | KFT DENTAMAX - BEST QUALITY DENTAL PRODUCTS IN BANGLADESH 🔥</marquee>
 </div>
-
 <div class="top">
 <div class="logo">KFT DENTAMAX<br><small>DENTAL PRODUCTS</small></div>
 <div class="search"><input placeholder="Search by product name..."><button>🔍</button></div>
 </div>
-
 <div class="banner">
 <h1>SMILE EVERY DAY<br><i>Explore Our Latest</i> Collection</h1>
 <p>✓ FREE DELIVERY &nbsp; ✓ 100% ORIGINAL &nbsp; ✓ CASH ON DELIVERY</p>
 <a href="#products">SHOP NOW →</a>
 </div>
-
-<!-- MAJHER BORO 6 TA BOX MUCHE DEWA HOISE - EKHANE AR NAI -->
-
-<!-- ORODEKA FILE -->
+<!-- ORODEKA FILE - FIXED -->
 <section class="alginate-products" id="endoSec">
 <h2>Endodontics - Root Canal Files</h2>
 <div class="alginate-grid">
-
 <article class="product-card" data-category="endodontics">
-<img src="plex%20v-1.jpeg.jpeg" alt="Orodeka File">
+<img src="plex%20v-1.jpeg" alt="Orodeka File">
 <h3>Orodeka File</h3>
 <p>Dental Root Canal Instruments - Taper-Sized (10 Blisters)</p>
 <span class="stock">In Stock ✅</span>
 <a href="https://wa.me/8801631268054?text=I%20want%20Orodeka%20File" class="order-btn">Order on WhatsApp</a>
 </article>
-
 <article class="product-card" data-category="endodontics">
-<img src="plex%20v-2.jpeg.jpeg" alt="Orodeka File">
+<img src="plex%20v-2.jpeg" alt="Orodeka File">
 <h3>Orodeka File</h3>
 <p>CE Certified - Precision, Quality, Trust - 10 Blisters Pack</p>
 <span class="stock">In Stock ✅</span>
 <a href="https://wa.me/8801631268054?text=I%20want%20Orodeka%20File" class="order-btn">Order on WhatsApp</a>
 </article>
-
 </div>
 </section>
-  <!-- ALGINATE 3 PRODUCTS -->
+<!-- ALGINATE 3 PRODUCTS -->
 <section class="alginate-products" id="alginateSec">
 <h2>Alginate Impression Materials</h2>
 <div class="alginate-grid">
@@ -122,18 +112,15 @@ body{background:#F4F7F5;padding-bottom:85px}
 </article>
 </div>
 </section>
-
 <div class="cats">
 <div class="cat">🦷 Dental Instruments</div>
 <div class="cat">🪥 Oral Care</div>
 <div class="cat">✨ Whitening</div>
 <div class="cat">🏥 Clinic Items</div>
 </div>
-
 <div class="trust">
 <div>🚚<br>Fast Delivery</div><div>✅<br>Original Product</div><div>💬<br>WhatsApp Order</div>
 </div>
-
 <div class="sec" id="products">
 <h2><span>Trending</span> Products</h2>
 <div class="grid" id="trendGrid">
@@ -143,10 +130,7 @@ body{background:#F4F7F5;padding-bottom:85px}
 <div class="card" data-category="surgical"><div class="img">✨<span class="off">50% off</span></div><div class="card-body"><h3>Dentamax Scaling & Polishing Kit</h3><div class="price"><b>৳990</b><s>৳1990</s></div><a class="buy" href="https://wa.me/8801631268054?text=I want Scaling Kit">Order on WhatsApp</a></div></div>
 </div>
 </div>
-
 <a class="wa" href="https://wa.me/8801631268054?text=Assalamualaikum%20KFT%20DENTAMAX">💬</a>
-
-<!-- CATEGORY POPUP - NICHE CATEGORY TE CHAP DILE ASBE -->
 <div id="catPopup" style="display:none; position:fixed; bottom:75px; left:10px; right:10px; background:#fff; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.3); z-index:9999; padding:10px;">
 <div onclick="goCat('endodontics')" style="padding:14px; border-bottom:1px solid #eee; font-weight:bold; cursor:pointer;">🦷 Endodontics - Files, Gutta Percha, Sealer</div>
 <div onclick="goCat('gi')" style="padding:14px; border-bottom:1px solid #eee; font-weight:bold; cursor:pointer;">💊 GI & Restorative - GI Cement, Luting, ZOE</div>
@@ -157,46 +141,41 @@ body{background:#F4F7F5;padding-bottom:85px}
 <div onclick="goCat('all')" style="padding:14px; border-bottom:1px solid #eee; font-weight:bold; cursor:pointer; color:#0A5C36;">🏠 সব প্রোডাক্ট দেখুন</div>
 <div onclick="closeCat()" style="text-align:center; padding:10px; color:red; font-weight:bold; cursor:pointer;">✕ বন্ধ করুন</div>
 </div>
-
 <div class="bottom">
 <a href="javascript:void(0)" onclick="openCat()">☰<br>Category</a>
 <a href="#" class="home">⌂</a>
 <a href="#">🛒<br>Cart</a>
 <a href="https://wa.me/8801631268054">🚚<br>Track Order</a>
 </div>
-
 <script>
-function openCat(){
-  var p = document.getElementById('catPopup');
-  if(p.style.display === 'none'){ p.style.display = 'block'; } else { p.style.display = 'none'; }
-}
+function openCat(){ var p = document.getElementById('catPopup'); if(p.style.display === 'none'){ p.style.display = 'block'; } else { p.style.display = 'none'; } }
 function closeCat(){ document.getElementById('catPopup').style.display = 'none'; }
 function goCat(cat){
-  closeCat();
-  if(cat === 'all'){
-    document.querySelectorAll('.product-card, .card').forEach(function(c){ c.style.display = ''; });
-    document.getElementById('alginateSec').style.display = 'block';
-    document.getElementById('products').style.display = 'block';
-    window.scrollTo({top: 400, behavior:'smooth'});
-    return;
-  }
-  var found = false;
-  document.querySelectorAll('.product-card, .card').forEach(function(c){
-    if(c.getAttribute('data-category') === cat){ c.style.display = ''; found = true; } else { c.style.display = 'none'; }
-  });
-  // Section hide/show
-  var algiVisible = false;
-  document.querySelectorAll('#alginateSec .product-card').forEach(function(c){ if(c.style.display !== 'none') algiVisible = true; });
-  document.getElementById('alginateSec').style.display = algiVisible ? 'block' : 'none';
-  var trendVisible = false;
-  document.querySelectorAll('#trendGrid .card').forEach(function(c){ if(c.style.display !== 'none') trendVisible = true; });
-  document.getElementById('products').style.display = trendVisible ? 'block' : 'none';
-  window.scrollTo({top: 350, behavior:'smooth'});
-  if(!found){
-    setTimeout(function(){ alert('এই ক্যাটাগরির প্রোডাক্ট খুব শীঘ্রই আসছে। WhatsApp এ অর্ডার করতে পারেন: 01631268054'); }, 400);
-  }
+closeCat();
+if(cat === 'all'){
+document.querySelectorAll('.product-card, .card').forEach(function(c){ c.style.display = ''; });
+document.getElementById('endoSec').style.display = 'block';
+document.getElementById('alginateSec').style.display = 'block';
+document.getElementById('products').style.display = 'block';
+window.scrollTo({top: 400, behavior:'smooth'});
+return;
+}
+var found = false;
+document.querySelectorAll('.product-card, .card').forEach(function(c){
+if(c.getAttribute('data-category') === cat){ c.style.display = ''; found = true; } else { c.style.display = 'none'; }
+});
+var endoVisible = false;
+document.querySelectorAll('#endoSec .product-card').forEach(function(c){ if(c.style.display !== 'none') endoVisible = true; });
+document.getElementById('endoSec').style.display = endoVisible ? 'block' : 'none';
+var algiVisible = false;
+document.querySelectorAll('#alginateSec .product-card').forEach(function(c){ if(c.style.display !== 'none') algiVisible = true; });
+document.getElementById('alginateSec').style.display = algiVisible ? 'block' : 'none';
+var trendVisible = false;
+document.querySelectorAll('#trendGrid .card').forEach(function(c){ if(c.style.display !== 'none') trendVisible = true; });
+document.getElementById('products').style.display = trendVisible ? 'block' : 'none';
+window.scrollTo({top: 350, behavior:'smooth'});
+if(!found){ setTimeout(function(){ alert('এই ক্যাটাগরির প্রোডাক্ট খুব শীঘ্রই আসছে। WhatsApp এ অর্ডার করতে পারেন: 01631268054'); }, 400); }
 }
 </script>
-
 </body>
 </html>
