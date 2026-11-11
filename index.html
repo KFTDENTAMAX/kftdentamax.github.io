@@ -7,7 +7,7 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
 body{background:#F4F7F5;padding-bottom:85px}
-.top{background:#0A5C36;padding:12px 10px;display:flex;gap:8px;align-items:center;position:sticky;top:0;z-index:100}
+.top{background:#0A5C36;padding:12px 10px;display:flex;gap:8px;align-items:center;position:sticky;top:28px;z-index:100}
 .logo{color:#fff;font-weight:900;font-size:19px;line-height:1}
 .logo small{font-size:10px;letter-spacing:2px;color:#FFE66D}
 .search{flex:1;background:#fff;border-radius:25px;display:flex;overflow:hidden}
@@ -39,32 +39,6 @@ body{background:#F4F7F5;padding-bottom:85px}
 .wa{position:fixed;bottom:95px;right:14px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;z-index:999;text-decoration:none;box-shadow:0 4px 12px #0003}
 .trust{display:flex;gap:8px;padding:12px}
 .trust div{flex:1;background:#fff;text-align:center;padding:10px 4px;border-radius:12px;font-size:12px;font-weight:bold}
-</style>
-</head>
-<body>
-
-<div class="top">
-  <div class="logo">KFT DENTAMAX<br><small>DENTAL PRODUCTS</small></div>
-  <div class="search"><input placeholder="Search by product name..."><button>🔍</button></div>
-</div>
-
-<div class="banner">
-  <h1>SMILE EVERY DAY<br><i>Explore Our Latest</i> Collection</h1>
-  <p>✓ FREE DELIVERY &nbsp; ✓ 100% ORIGINAL &nbsp; ✓ CASH ON DELIVERY</p>
-  <a href="#products">SHOP NOW →</a>
-</div>
-  <!-- HIGHLIGHT CATEGORIES - FIXED -->
-<style>
-.kft-cat{padding:18px 12px;max-width:1100px;margin:0 auto}
-.kft-cat h2{text-align:center;font-size:22px;margin:0 0 14px;font-family:Arial,sans-serif}
-.kft-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.kft-card{background:#f8fff8;border:1px solid #d9ead3;border-radius:14px;overflow:hidden;text-align:center;text-decoration:none;color:#111;display:block}
-.kft-card i{display:block;font-size:34px;padding:16px 0 4px;font-style:normal}
-.kft-card img{width:100%;height:90px;object-fit:cover;display:block;background:#e8f5e9}
-.kft-card b{display:block;padding:8px 6px 2px;font-size:15px}
-.kft-card span{display:block;padding:0 6px 12px;font-size:12px;color:#555}
-@media(max-width:600px){.kft-grid{grid-template-columns:repeat(2,1fr)}}
-
 .alginate-products{padding:18px 12px;max-width:1100px;margin:0 auto}
 .alginate-products h2{text-align:center;font-size:22px;margin:0 0 14px}
 .alginate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
@@ -75,117 +49,131 @@ body{background:#F4F7F5;padding-bottom:85px}
 .product-card .stock{display:block;color:#168344;font-weight:bold;font-size:13px;margin:8px}
 .order-btn{display:block;background:#25D366;color:#fff;text-decoration:none;padding:10px;border-radius:8px;font-weight:bold;font-size:13px}
 @media(max-width:600px){.alginate-grid{grid-template-columns:1fr 1fr}}
+.price, .product-price, s, del { display:none !important; }
 </style>
+</head>
+<body>
 
-<section class="kft-cat">
-<div class="kft-grid">
-
-<a class="kft-card" href="https://wa.me/8801631268054?text=Endodontics%20lagbe">
-<img src="cat-endo.jpg" onerror="this.style.display='none'"><i>🦷</i><b>Endodontics</b><span>Files, Gutta Percha, Sealer</span></a>
-
-<a class="kft-card" href="https://wa.me/8801631268054?text=GI%20Restorative%20lagbe">
-<img src="cat-gi.jpg" onerror="this.style.display='none'"><i>💊</i><b>GI & Restorative</b><span>GI Cement, Luting, ZOE</span></a>
-
-<a class="kft-card" href="https://wa.me/8801631268054?text=Composite%20lagbe">
-<img src="cat-composite.jpg" onerror="this.style.display='none'"><i>✨</i><b>Composite & Bonding</b><span>A2, A3, Etching, Bonding</span></a>
-
-<a class="kft-card" href="https://wa.me/8801631268054?text=Impression%20lagbe">
-<img src="cat-impression.jpg" onerror="this.style.display='none'"><i>👄</i><b>Impression</b><span>Alginate, Putty, Light Body</span></a>
-
-<a class="kft-card" href="https://wa.me/8801631268054?text=Surgical%20lagbe">
-<img src="cat-surgical.jpg" onerror="this.style.display='none'"><i>🩺</i><b>Surgical Instruments</b><span>Forceps, Elevator, Suture</span></a>
-
-<a class="kft-card" href="https://wa.me/8801631268054?text=Handpiece%20lagbe">
-<img src="cat-handpiece.jpg" onerror="this.style.display='none'"><i>⚙️</i><b>Handpiece & Equipment</b><span>Cartridge, Chair, Suction</span></a>
-
+<!-- 1. LIVE + NUMBER - EKDOM UPORE -->
+<div style="background:#000;color:#fff;overflow:hidden;white-space:nowrap;padding:6px 0;font-size:13px;font-weight:bold;position:sticky;top:0;z-index:9999;">
+<marquee>🔴 LIVE : সারা বাংলাদেশে ক্যাশ অন ডেলিভারি চলছে | অর্ডার করতে কল করুন : 01631268054 | WhatsApp : 01631268054 | KFT DENTAMAX - BEST QUALITY DENTAL PRODUCTS IN BANGLADESH 🔥</marquee>
 </div>
-</section>
-<!-- HIGHLIGHT END -->
+
+<div class="top">
+<div class="logo">KFT DENTAMAX<br><small>DENTAL PRODUCTS</small></div>
+<div class="search"><input placeholder="Search by product name..."><button>🔍</button></div>
+</div>
+
+<div class="banner">
+<h1>SMILE EVERY DAY<br><i>Explore Our Latest</i> Collection</h1>
+<p>✓ FREE DELIVERY &nbsp; ✓ 100% ORIGINAL &nbsp; ✓ CASH ON DELIVERY</p>
+<a href="#products">SHOP NOW →</a>
+</div>
+
+<!-- MAJHER BORO 6 TA BOX MUCHE DEWA HOISE - EKHANE AR NAI -->
 
 <!-- ALGINATE 3 PRODUCTS -->
-<section class="alginate-products">
-  <h2>Alginate Impression Materials</h2>
-  <div class="alginate-grid">
-    <article class="product-card">
-      <img src="tropical.jpg" alt="Zhermack Tropicalgin">
-      <h3>Zhermack Tropicalgin</h3>
-      <p>Fast Setting Alginate - Tropical Flavour</p>
-      <span class="stock">In Stock ✅</span>
-      <a href="https://wa.me/8801631268054?text=I%20want%20Zhermack%20Tropicalgin" class="order-btn">Order on WhatsApp</a>
-    </article>
-    <article class="product-card">
-      <img src="alginate.jpg" alt="Dental Alginate">
-      <h3>Dental Alginate</h3>
-      <p>High Accuracy Alginate Impression Material</p>
-      <span class="stock">In Stock ✅</span>
-      <a href="https://wa.me/8801631268054?text=I%20want%20Dental%20Alginate" class="order-btn">Order on WhatsApp</a>
-    </article>
-    <article class="product-card">
-      <img src="hygedent.jpg" alt="Hygedent Alginate">
-      <h3>Hygedent Alginate</h3>
-      <p>Premium Alginate - Dust Free</p>
-      <span class="stock">In Stock ✅</span>
-      <a href="https://wa.me/8801631268054?text=I%20want%20Hygedent%20Alginate" class="order-btn">Order on WhatsApp</a>
-    </article>
-  </div>
+<section class="alginate-products" id="alginateSec">
+<h2>Alginate Impression Materials</h2>
+<div class="alginate-grid">
+<article class="product-card" data-category="impression">
+<img src="tropical.jpg" alt="Zhermack Tropicalgin">
+<h3>Zhermack Tropicalgin</h3>
+<p>Fast Setting Alginate - Tropical Flavour</p>
+<span class="stock">In Stock ✅</span>
+<a href="https://wa.me/8801631268054?text=I%20want%20Zhermack%20Tropicalgin" class="order-btn">Order on WhatsApp</a>
+</article>
+<article class="product-card" data-category="impression">
+<img src="alginate.jpg" alt="Dental Alginate">
+<h3>Dental Alginate</h3>
+<p>High Accuracy Alginate Impression Material</p>
+<span class="stock">In Stock ✅</span>
+<a href="https://wa.me/8801631268054?text=I%20want%20Dental%20Alginate" class="order-btn">Order on WhatsApp</a>
+</article>
+<article class="product-card" data-category="impression">
+<img src="hygedent.jpg" alt="Hygedent Alginate">
+<h3>Hygedent Alginate</h3>
+<p>Premium Alginate - Dust Free</p>
+<span class="stock">In Stock ✅</span>
+<a href="https://wa.me/8801631268054?text=I%20want%20Hygedent%20Alginate" class="order-btn">Order on WhatsApp</a>
+</article>
+</div>
 </section>
 
-
-<marquee class="marquee">🔥 KFT DENTAMAX RANGE - BEST QUALITY DENTAL PRODUCTS IN BANGLADESH 🔥</marquee>
-
 <div class="cats">
-  <div class="cat">🦷 Dental Instruments</div>
-  <div class="cat">🪥 Oral Care</div>
-  <div class="cat">✨ Whitening</div>
-  <div class="cat">🏥 Clinic Items</div>
+<div class="cat">🦷 Dental Instruments</div>
+<div class="cat">🪥 Oral Care</div>
+<div class="cat">✨ Whitening</div>
+<div class="cat">🏥 Clinic Items</div>
 </div>
 
 <div class="trust">
-  <div>🚚<br>Fast Delivery</div><div>✅<br>Original Product</div><div>💬<br>WhatsApp Order</div>
+<div>🚚<br>Fast Delivery</div><div>✅<br>Original Product</div><div>💬<br>WhatsApp Order</div>
 </div>
 
 <div class="sec" id="products">
-  <h2><span>Trending</span> Products</h2>
-  <div class="grid">
-    <div class="card"><div class="img">🦷<span class="off">38% off</span></div><div class="card-body"><h3>Dentamax Dental Mirror Set Premium</h3><div class="price"><b>৳750</b><s>৳1200</s></div><a class="buy" href="https://wa.me/8801631268054?text=I want Dental Mirror Set">Order on WhatsApp</a></div></div>
-    <div class="card"><div class="img">😁<span class="off">43% off</span></div><div class="card-body"><h3>Dentamax Teeth Whitening Kit</h3><div class="price"><b>৳1090</b><s>৳1900</s></div><a class="buy" href="https://wa.me/8801631268054?text=I want Whitening Kit">Order on WhatsApp</a></div></div>
-    <div class="card"><div class="img">🪥<span class="off">38% off</span></div><div class="card-body"><h3>Dentamax Electric Toothbrush Pro</h3><div class="price"><b>৳1450</b><s>৳2300</s></div><a class="buy" href="https://wa.me/8801631268054?text=I want Toothbrush">Order on WhatsApp</a></div></div>
-    <div class="card"><div class="img">✨<span class="off">50% off</span></div><div class="card-body"><h3>Dentamax Scaling & Polishing Kit</h3><div class="price"><b>৳990</b><s>৳1990</s></div><a class="buy" href="https://wa.me/8801631268054?text=I want Scaling Kit">Order on WhatsApp</a></div></div>
-  </div>
+<h2><span>Trending</span> Products</h2>
+<div class="grid" id="trendGrid">
+<div class="card" data-category="surgical"><div class="img">🦷<span class="off">38% off</span></div><div class="card-body"><h3>Dentamax Dental Mirror Set Premium</h3><div class="price"><b>৳750</b><s>৳1200</s></div><a class="buy" href="https://wa.me/8801631268054?text=I want Dental Mirror Set">Order on WhatsApp</a></div></div>
+<div class="card" data-category="composite"><div class="img">😁<span class="off">43% off</span></div><div class="card-body"><h3>Dentamax Teeth Whitening Kit</h3><div class="price"><b>৳1090</b><s>৳1900</s></div><a class="buy" href="https://wa.me/8801631268054?text=I want Whitening Kit">Order on WhatsApp</a></div></div>
+<div class="card" data-category="composite"><div class="img">🪥<span class="off">38% off</span></div><div class="card-body"><h3>Dentamax Electric Toothbrush Pro</h3><div class="price"><b>৳1450</b><s>৳2300</s></div><a class="buy" href="https://wa.me/8801631268054?text=I want Toothbrush">Order on WhatsApp</a></div></div>
+<div class="card" data-category="surgical"><div class="img">✨<span class="off">50% off</span></div><div class="card-body"><h3>Dentamax Scaling & Polishing Kit</h3><div class="price"><b>৳990</b><s>৳1990</s></div><a class="buy" href="https://wa.me/8801631268054?text=I want Scaling Kit">Order on WhatsApp</a></div></div>
+</div>
 </div>
 
 <a class="wa" href="https://wa.me/8801631268054?text=Assalamualaikum%20KFT%20DENTAMAX">💬</a>
 
-<div class="bottom">
-  <a href="#">☰<br>Category</a>
-  <a href="#" class="home">⌂</a>
-  <a href="#">🛒<br>Cart</a>
-  <a href="https://wa.me/8801631268054">🚚<br>Track Order</a>
+<!-- CATEGORY POPUP - NICHE CATEGORY TE CHAP DILE ASBE -->
+<div id="catPopup" style="display:none; position:fixed; bottom:75px; left:10px; right:10px; background:#fff; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.3); z-index:9999; padding:10px;">
+<div onclick="goCat('endodontics')" style="padding:14px; border-bottom:1px solid #eee; font-weight:bold; cursor:pointer;">🦷 Endodontics - Files, Gutta Percha, Sealer</div>
+<div onclick="goCat('gi')" style="padding:14px; border-bottom:1px solid #eee; font-weight:bold; cursor:pointer;">💊 GI & Restorative - GI Cement, Luting, ZOE</div>
+<div onclick="goCat('composite')" style="padding:14px; border-bottom:1px solid #eee; font-weight:bold; cursor:pointer;">✨ Composite & Bonding - A2, A3, Etching</div>
+<div onclick="goCat('impression')" style="padding:14px; border-bottom:1px solid #eee; font-weight:bold; cursor:pointer;">👄 Impression - Alginate, Putty, Light Body</div>
+<div onclick="goCat('surgical')" style="padding:14px; border-bottom:1px solid #eee; font-weight:bold; cursor:pointer;">🩺 Surgical Instruments - Forceps, Elevator</div>
+<div onclick="goCat('handpiece')" style="padding:14px; border-bottom:1px solid #eee; font-weight:bold; cursor:pointer;">⚙️ Handpiece & Equipment - Cartridge, Chair</div>
+<div onclick="goCat('all')" style="padding:14px; border-bottom:1px solid #eee; font-weight:bold; cursor:pointer; color:#0A5C36;">🏠 সব প্রোডাক্ট দেখুন</div>
+<div onclick="closeCat()" style="text-align:center; padding:10px; color:red; font-weight:bold; cursor:pointer;">✕ বন্ধ করুন</div>
 </div>
+
+<div class="bottom">
+<a href="javascript:void(0)" onclick="openCat()">☰<br>Category</a>
+<a href="#" class="home">⌂</a>
+<a href="#">🛒<br>Cart</a>
+<a href="https://wa.me/8801631268054">🚚<br>Track Order</a>
+</div>
+
 <script>
-window.addEventListener('load', function(){
-  document.querySelectorAll('*').forEach(function(e){
-    if(e.textContent.trim() === 'Highlighted Categories'){
-      let box = e.parentElement;
-      if(box) box.style.display = 'none';
-      // নিচের বক্সগুলোও লুকানো
-      let next = box.nextElementSibling;
-      if(next) next.style.display = 'none';
-    }
+function openCat(){
+  var p = document.getElementById('catPopup');
+  if(p.style.display === 'none'){ p.style.display = 'block'; } else { p.style.display = 'none'; }
+}
+function closeCat(){ document.getElementById('catPopup').style.display = 'none'; }
+function goCat(cat){
+  closeCat();
+  if(cat === 'all'){
+    document.querySelectorAll('.product-card, .card').forEach(function(c){ c.style.display = ''; });
+    document.getElementById('alginateSec').style.display = 'block';
+    document.getElementById('products').style.display = 'block';
+    window.scrollTo({top: 400, behavior:'smooth'});
+    return;
+  }
+  var found = false;
+  document.querySelectorAll('.product-card, .card').forEach(function(c){
+    if(c.getAttribute('data-category') === cat){ c.style.display = ''; found = true; } else { c.style.display = 'none'; }
   });
-});
+  // Section hide/show
+  var algiVisible = false;
+  document.querySelectorAll('#alginateSec .product-card').forEach(function(c){ if(c.style.display !== 'none') algiVisible = true; });
+  document.getElementById('alginateSec').style.display = algiVisible ? 'block' : 'none';
+  var trendVisible = false;
+  document.querySelectorAll('#trendGrid .card').forEach(function(c){ if(c.style.display !== 'none') trendVisible = true; });
+  document.getElementById('products').style.display = trendVisible ? 'block' : 'none';
+  window.scrollTo({top: 350, behavior:'smooth'});
+  if(!found){
+    setTimeout(function(){ alert('এই ক্যাটাগরির প্রোডাক্ট খুব শীঘ্রই আসছে। WhatsApp এ অর্ডার করতে পারেন: 01631268054'); }, 400);
+  }
+}
 </script>
-  <style>
-.price, .product-price, s, del { display:none !important; }
-</style>
-<script>
-window.addEventListener('load', function(){
-  document.querySelectorAll('*').forEach(function(e){
-    if(e.children.length === 0 && e.textContent.includes('৳')){
-      e.style.display = 'none';
-    }
-  });
-});
-</script>
+
 </body>
 </html>
