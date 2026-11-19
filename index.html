@@ -198,5 +198,16 @@ window.scrollTo({top: 350, behavior:'smooth'});
 if(!found){ setTimeout(function(){ alert('এই ক্যাটাগরির প্রোডাক্ট খুব শীঘ্রই আসছে। WhatsApp এ অর্ডার করতে পারেন: 01631268054'); }, 400); }
 }
 </script>
+  <style>
+.card img{cursor:zoom-in !important}
+.card .img img{object-fit:cover !important;width:100% !important;height:100% !important}
+</style>
+<script>
+document.addEventListener('click',function(e){
+  if(e.target.tagName==='IMG' && e.target.closest('.card')){
+    window.open(e.target.src,'_blank');
+  }
+});
+</script>
 </body>
 </html>
