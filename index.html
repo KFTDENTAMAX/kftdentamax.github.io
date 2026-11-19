@@ -199,6 +199,18 @@ if(!found){ setTimeout(function(){ alert('এই ক্যাটাগরির 
 }
 </script>
   <style>
+.card img, .product-card img{cursor:zoom-in !important;object-fit:cover !important}
+.card, .product-card{overflow:hidden !important}
+</style>
+<script>
+document.addEventListener('click',function(e){
+  if(e.target.tagName==='IMG'){
+    var p = e.target.closest('.card, .product-card, .product, [class*="product"]');
+    if(p){ window.open(e.target.src,'_blank'); }
+  }
+});
+</script>
+  <style>
 .card img{cursor:zoom-in !important}
 .card .img img{object-fit:cover !important;width:100% !important;height:100% !important}
 </style>
