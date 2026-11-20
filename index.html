@@ -199,8 +199,8 @@ if(!found){ setTimeout(function(){ alert('এই ক্যাটাগরির 
 }
 </script>
   <style>
-.card img, .product-card img{cursor:zoom-in !important;object-fit:cover !important}
-.card, .product-card{overflow:hidden !important}
+.card img, .product-card img{cursor:zoom-in !important;object-fit:contain !important}
+.card, .product-card{overflow:visible !important}
 </style>
 <script>
 document.addEventListener('click',function(e){
@@ -212,7 +212,7 @@ document.addEventListener('click',function(e){
 </script>
   <style>
 .card img{cursor:zoom-in !important}
-.card .img img{object-fit:cover !important;width:100% !important;height:100% !important}
+.card .img img{object-fit:contain !important;width:100% !important;height:100% !important}
 </style>
 <script>
 document.addEventListener('click',function(e){
