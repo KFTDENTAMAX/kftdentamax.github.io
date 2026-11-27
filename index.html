@@ -1,336 +1,100 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KFT DENTAMAX</title>
+<title>KFT Dentamax - SMILE EVERY DAY</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#F4F7F5;padding-bottom:85px}
-.top{background:#0A5C36;padding:12px 10px;display:flex;gap:8px;align-items:center;position:sticky;top:28px;z-index:100}
-.logo{color:#fff;font-weight:900;font-size:19px;line-height:1}
-.logo small{font-size:10px;letter-spacing:2px;color:#FFE66D}
-.search{flex:1;background:#fff;border-radius:25px;display:flex;overflow:hidden}
-.search input{flex:1;border:none;padding:11px 12px;outline:none;font-size:14px}
-.search button{background:#0A5C36;color:#fff;border:none;padding:0 14px;font-size:18px}
-.banner{margin:12px;border-radius:16px;overflow:hidden;background:linear-gradient(90deg,#0A5C36,#0FB36F);color:#fff;padding:24px 16px}
-.banner h1{font-size:27px;line-height:1.2}
-.banner h1 i{color:#FFE66D}
-.banner p{font-size:12px;margin-top:8px;opacity:.9}
-.banner a{display:inline-block;background:#fff;color:#000;font-weight:bold;padding:8px 16px;border-radius:20px;font-size:12px;margin-top:14px;text-decoration:none}
-.marquee{background:#fff;color:#0A5C36;font-weight:900;padding:9px 0;font-size:15px;border-top:2px solid #0A5C36;border-bottom:2px solid #0A5C36}
-.cats{display:flex;gap:10px;overflow-x:auto;padding:12px}
-.cat{background:#fff;padding:9px 15px;border-radius:20px;white-space:nowrap;font-size:14px;font-weight:bold;box-shadow:0 1px 5px #0001}
-.sec{padding:5px 12px}
-.sec h2{font-size:23px}.sec h2 span{color:#0A5C36}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
-.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px #0001}
-.card .img{position:relative;height:180px;background:#E8F5EE;display:flex;align-items:center;justify-content:center;font-size:55px}
-.off{position:absolute;top:8px;right:8px;background:#0A5C36;color:#fff;padding:5px 9px;border-radius:6px;font-size:13px;font-weight:bold}
-.card-body{padding:11px}
-.card-body h3{font-size:15px;height:38px;overflow:hidden;line-height:1.3}
-.price{margin-top:9px;display:flex;gap:8px;align-items:center}
-.price b{background:#0A5C36;color:#fff;padding:6px 13px;border-radius:20px}
-.price s{color:#888}
-.buy{display:block;text-align:center;background:#25D366;color:#fff;text-decoration:none;padding:10px;border-radius:10px;margin-top:11px;font-weight:bold}
-.bottom{position:fixed;bottom:0;left:0;right:0;background:#0A5C36;display:flex;justify-content:space-around;align-items:center;padding:8px 0 12px;z-index:100}
-.bottom a{color:#fff;text-decoration:none;text-align:center;font-size:13px}
-.bottom .home{background:#fff;color:#0A5C36;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;margin-top:-30px;border:3px solid #F4F7F5}
-.wa{position:fixed;bottom:95px;right:14px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;z-index:999;text-decoration:none;box-shadow:0 4px 12px #0003}
-.trust{display:flex;gap:8px;padding:12px}
-.trust div{flex:1;background:#fff;text-align:center;padding:10px 4px;border-radius:12px;font-size:12px;font-weight:bold}
-.alginate-products{padding:18px 12px;max-width:1100px;margin:0 auto}
-.alginate-products h2{text-align:center;font-size:22px;margin:0 0 14px}
-.alginate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.product-card{background:#fff;border:1px solid #d9ead3;border-radius:14px;overflow:hidden;padding:12px;text-align:center}
-.product-card img{width:100%;height:180px;object-fit:contain;display:block}
-.product-card h3{font-size:16px;margin:10px 0 6px}
-.product-card p{font-size:13px;color:#555;margin-bottom:8px}
-.product-card .stock{display:block;color:#168344;font-weight:bold;font-size:13px;margin:8px}
-.order-btn{display:block;background:#25D366;color:#fff;text-decoration:none;padding:10px;border-radius:8px;font-weight:bold;font-size:13px}
-@media(max-width:600px){.alginate-grid{grid-template-columns:1fr 1fr}}
-.price, .product-price, s, del { display:none !important; }
+.topbar{background:#0a7a42;color:#fff;font-size:13px;padding:6px 20px;display:flex;justify-content:space-between}
+header{display:flex;align-items:center;gap:20px;padding:15px 20px;background:#fff;position:sticky;top:0;z-index:99;box-shadow:0 2px 10px #ddd}
+.logo{font-size:26px;font-weight:900;color:#0a7a42;line-height:1}
+.logo span{font-size:12px;letter-spacing:3px;color:#333;display:block}
+.search{flex:1;display:flex;border:2px solid #0a7a42;border-radius:25px;overflow:hidden}
+.search input{flex:1;padding:11px 15px;border:0;outline:none}
+.search button{background:#0a7a42;color:#fff;border:0;padding:0 22px;font-weight:bold;cursor:pointer}
+.cart{background:#ff6b00;color:#fff;padding:10px 18px;border-radius:20px;font-weight:bold}
+.main{display:flex;gap:15px;padding:15px 20px;background:#f4f4f4;align-items:flex-start}
+/* LEFT CATEGORY - NEKBUY STYLE HOVER */
+.sidebar{width:260px;background:#fff;border-radius:10px;overflow:hidden;flex-shrink:0;box-shadow:0 2px 8px #ddd}
+.sidebar h3{background:#0a7a42;color:#fff;padding:14px 15px;font-size:16px}
+.cat{position:relative;border-bottom:1px solid #eee}
+.cat > a{display:flex;justify-content:space-between;padding:13px 15px;color:#222;text-decoration:none;font-weight:600}
+.cat:hover{background:#e8f8ef}
+.cat:hover .sub{display:block}
+.sub{display:none;position:absolute;left:260px;top:0;width:280px;background:#fff;box-shadow:0 5px 20px #aaa;border-radius:0 10px 10px 0;padding:10px;z-index:100}
+.sub a{display:block;padding:10px;color:#333;text-decoration:none;border-bottom:1px solid #f0f0f0}
+.sub a:hover{color:#0a7a42;font-weight:bold}
+.right{flex:1}
+.banner{background:linear-gradient(90deg,#0a7a42,#00b45a);color:#fff;border-radius:12px;padding:30px;display:flex;justify-content:space-between;align-items:center}
+.banner h1{font-size:36px;line-height:1.2}
+.banner p{margin:10px 0}
+.banner button{background:#ff6b00;border:0;color:#fff;padding:12px 22px;border-radius:25px;font-weight:bold;cursor:pointer}
+.banner-img{font-size:80px}
+.section{margin-top:20px;background:#fff;padding:18px;border-radius:10px}
+.section h2{margin-bottom:15px;display:flex;justify-content:space-between}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.card{border:1px solid #eee;border-radius:10px;padding:10px;text-align:center}
+.card img{width:100%;height:180px;object-fit:contain}
+.card h4{font-size:15px;margin:8px 0}
+.price{color:#e60000;font-weight:800;font-size:18px}
+.card button{margin-top:8px;background:#0a7a42;color:#fff;border:0;padding:9px;width:100%;border-radius:20px;cursor:pointer}
+@media(max-width:768px){.main{flex-direction:column}.sidebar{width:100%}.sub{left:0;top:100%;width:100%}.products{grid-template-columns:repeat(2,1fr)}header{flex-wrap:wrap}.search{order:3;width:100%}}
 </style>
 </head>
 <body>
-<div style="background:#000;color:#fff;overflow:hidden;white-space:nowrap;padding:6px 0;font-size:13px;font-weight:bold;position:sticky;top:0;z-index:9999;">
-<marquee>🔴 LIVE : সারা বাংলাদেশে ক্যাশ অন ডেলিভারি চলছে | অর্ডার করতে কল করুন : 01631268054 | WhatsApp : 01631268054 | KFT DENTAMAX - BEST QUALITY DENTAL PRODUCTS IN BANGLADESH 🔥</marquee>
+
+<div class="topbar"><span>🚚 Free Delivery in Rangpur | Cash on Delivery</span><span>📞 017XX-XXXXXX | KFT Dentamax</span></div>
+
+<header>
+<div class="logo">KFT DENTAMAX<span>SMILE EVERY DAY</span></div>
+<div class="search"><input placeholder="Search GP Point, Files, Calcium..."><button>Search</button></div>
+<div class="cart">🛒 Cart</div>
+</header>
+
+<div class="main">
+<!-- LEFT SIDEBAR -->
+<div class="sidebar">
+<h3>☰ All Categories</h3>
+<div class="cat"><a href="#">Endodontics <span>›</span></a>
+  <div class="sub"><a href="#">Gutta Percha Point</a><a href="#">Rotary Files</a><a href="#">Hand Files</a><a href="#">Paper Point</a><a href="#">Calcium Hydroxide</a></div></div>
+<div class="cat"><a href="#">Restorative <span>›</span></a>
+  <div class="sub"><a href="#">Composite</a><a href="#">Glass Ionomer Cement</a><a href="#">Bonding Agent</a><a href="#">Etchant</a></div></div>
+<div class="cat"><a href="#">Cement & Calcium <span>›</span></a>
+  <div class="sub"><a href="#">Zinc Oxide Eugenol</a><a href="#">MTA</a><a href="#">Calcium Hydroxide Paste</a></div></div>
+<div class="cat"><a href="#">Surgery <span>›</span></a>
+  <div class="sub"><a href="#">Extraction Forceps</a><a href="#">Needle & Suture</a><a href="#">Surgical Bur</a></div></div>
+<div class="cat"><a href="#">Ortho & Prosthetics <span>›</span></a>
+  <div class="sub"><a href="#">Ortho Wire</a><a href="#">Bracket</a><a href="#">Alginate</a></div></div>
+<div class="cat"><a href="#">Consumables <span>›</span></a>
+  <div class="sub"><a href="#">Gloves</a><a href="#">Cotton Roll</a><a href="#">Suction Tip</a></div></div>
 </div>
-<div class="top">
-<div class="logo">KFT DENTAMAX<br><small>DENTAL PRODUCTS</small></div>
-<div class="search"><input placeholder="Search by product name..."><button>🔍</button></div>
-</div>
+
+<!-- RIGHT -->
+<div class="right">
 <div class="banner">
-<h1>SMILE EVERY DAY<br><i>Explore Our Latest</i> Collection</h1>
-<p>✓ FREE DELIVERY &nbsp; ✓ 100% ORIGINAL &nbsp; ✓ CASH ON DELIVERY</p>
-<a href="#products">SHOP NOW →</a>
+<div><p>WELCOME TO KFT DENTAMAX</p><h1>Original Dental<br>Products, Best Price</h1><p>GP Point, Files, Calcium - Sob Kichu Ek Jaigai</p><button>Shop Now →</button></div>
+<div class="banner-img">🦷</div>
 </div>
-<!-- ORODEKA FILE - FIXED -->
-<section class="alginate-products" id="endoSec">
-<h2>Endodontics - Root Canal Files</h2>
-<div class="alginate-grid">
-<article class="product-card" data-category="endodontics">
-<img src="plex-v-1.jpeg" alt="Orodeka File">
-<h3>Orodeka File</h3>
-<p>Dental Root Canal Instruments - Taper-Sized (10 Blisters)</p>
-<span class="stock">In Stock ✅</span>
-<a href="https://wa.me/8801631268054?text=I%20want%20Orodeka%20File" class="order-btn">Order on WhatsApp</a>
-</article>
-<article class="product-card" data-category="endodontics">
-<img src="plex-v-2.jpeg" alt="Orodeka File">
-<h3>Orodeka File</h3>
-<p>CE Certified - Precision, Quality, Trust - 10 Blisters Pack</p>
-<span class="stock">In Stock ✅</span>
-<a href="https://wa.me/8801631268054?text=I%20want%20Orodeka%20File" class="order-btn">Order on WhatsApp</a>
-</article>
-</div>
-</section>
-  <!-- KFT CARTRIDGE -->
-<section class="alginate-products" id="cartridgeSec">
-<h2>Handpiece - KFT Cartridge</h2>
-<div class="alginate-grid">
-<article class="product-card" data-category="handpiece">
-<img src="kft-cartridge-1.jpeg" alt="KFT Cartridge">
-<h3>KFT Cartridge</h3>
-<p>High Speed Handpiece Cartridge - Premium Quality</p>
-<span class="stock">In Stock ✅</span>
-<a href="https://wa.me/8801631268054?text=I%20want%20KFT%20Cartridge" class="order-btn">Order on WhatsApp</a>
-</article>
-<article class="product-card" data-category="handpiece">
-<img src="kft-cartridge-2.jpeg" alt="KFT Cartridge">
-<h3>KFT Cartridge</h3>
-<p>Compatible With All Standard Handpiece - Durable & Smooth</p>
-<span class="stock">In Stock ✅</span>
-<a href="https://wa.me/8801631268054?text=I%20want%20KFT%20Cartridge" class="order-btn">Order on WhatsApp</a>
-</article>
-</div>
-</section>
-  <!-- GP POINT -->
-<section class="alginate products" id="gpPointSec">
-<h2>GP Point</h2>
-<div class="alginate-grid">
 
-<article class="product-card" data-category="gp-point">
-<img src="gp.jpg" alt="GP Point">
-<h3>GP Point 2% - 15</h3>
-<p>Gutta Percha Point 2% / 15</p>
-<span class="stock">In Stock ✅</span>
-<a href="https://wa.me/8801631268054?text=I%20want%20GP%20POINT%202%25%20-%2015" class="order-btn">Order on WhatsApp</a>
-</article>
-
-<article class="product-card" data-category="gp-point">
-<img src="gp.jpg" alt="GP Point">
-<h3>GP Point 2% - 20</h3>
-<p>Gutta Percha Point 2% / 20</p>
-<span class="stock">In Stock ✅</span>
-<a href="https://wa.me/8801631268054?text=I%20want%20GP%20POINT%202%25%20-%2020" class="order-btn">Order on WhatsApp</a>
-</article>
-
-<article class="product-card" data-category="gp-point">
-<img src="gp.jpg" alt="GP Point">
-<h3>GP Point 2% - 25</h3>
-<p>Gutta Percha Point 2% / 25</p>
-<span class="stock">In Stock ✅</span>
-<a href="https://wa.me/8801631268054?text=I%20want%20GP%20POINT%202%25%20-%2025" class="order-btn">Order on WhatsApp</a>
-</article>
-
-<article class="product-card" data-category="gp-point">
-<img src="gp.jpg" alt="GP Point">
-<h3>GP Point 2% - 30</h3>
-<p>Gutta Percha Point 2% / 30</p>
-<span class="stock">In Stock ✅</span>
-<a href="https://wa.me/8801631268054?text=I%20want%20GP%20POINT%202%25%20-%2030" class="order-btn">Order on WhatsApp</a>
-</article>
-
-<article class="product-card" data-category="gp-point">
-<img src="gp.jpg" alt="GP Point">
-<h3>GP Point 2% - 35</h3>
-<p>Gutta Percha Point 2% / 35</p>
-<span class="stock">In Stock ✅</span>
-<a href="https://wa.me/8801631268054?text=I%20want%20GP%20POINT%202%25%20-%2035" class="order-btn">Order on WhatsApp</a>
-</article>
-
-<article class="product-card" data-category="gp-point">
-<img src="gp.jpg" alt="GP Point">
-<h3>GP Point 2% - 40</h3>
-<p>Gutta Percha Point 2% / 40</p>
-<span class="stock">In Stock ✅</span>
-<a href="https://wa.me/8801631268054?text=I%20want%20GP%20POINT%202%25%20-%2040" class="order-btn">Order on WhatsApp</a>
-</article>
-
-<article class="product-card" data-category="gp-point">
-<img src="gp.jpg" alt="GP Point">
-<h3>GP Point 4% - 15</h3>
-<p>Gutta Percha Point 4% / 15</p>
-<span class="stock">In Stock ✅</span>
-<a href="https://wa.me/8801631268054?text=I%20want%20GP%20POINT%204%25%20-%2015" class="order-btn">Order on WhatsApp</a>
-</article>
-
-<article class="product-card" data-category="gp-point">
-<img src="gp.jpg" alt="GP Point">
-<h3>GP Point 4% - 20</h3>
-<p>Gutta Percha Point 4% / 20</p>
-<span class="stock">In Stock ✅</span>
-<a href="https://wa.me/8801631268054?text=I%20want%20GP%20POINT%204%25%20-%2020" class="order-btn">Order on WhatsApp</a>
-</article>
-
-<article class="product-card" data-category="gp-point">
-<img src="gp.jpg" alt="GP Point">
-<h3>GP Point 4% - 25</h3>
-<p>Gutta Percha Point 4% / 25</p>
-<span class="stock">In Stock ✅</span>
-<a href="https://wa.me/8801631268054?text=I%20want%20GP%20POINT%204%25%20-%2025" class="order-btn">Order on WhatsApp</a>
-</article>
-
-<article class="product-card" data-category="gp-point">
-<img src="gp.jpg" alt="GP Point">
-<h3>GP Point 4% - 30</h3>
-<p>Gutta Percha Point 4% / 30</p>
-<span class="stock">In Stock ✅</span>
-<a href="https://wa.me/8801631268054?text=I%20want%20GP%20POINT%204%25%20-%2030" class="order-btn">Order on WhatsApp</a>
-</article>
-
-<article class="product-card" data-category="gp-point">
-<img src="gp.jpg" alt="GP Point">
-<h3>GP Point 6% - 20</h3>
-<p>Gutta Percha Point 6% / 20</p>
-<span class="stock">In Stock ✅</span>
-<a href="https://wa.me/8801631268054?text=I%20want%20GP%20POINT%206%25%20-%2020" class="order-btn">Order on WhatsApp</a>
-</article>
-
-<article class="product-card" data-category="gp-point">
-<img src="gp.jpg" alt="GP Point">
-<h3>GP Point 6% - 25</h3>
-<p>Gutta Percha Point 6% / 25</p>
-<span class="stock">In Stock ✅</span>
-<a href="https://wa.me/8801631268054?text=I%20want%20GP%20POINT%206%25%20-%2025" class="order-btn">Order on WhatsApp</a>
-</article>
-
-<article class="product-card" data-category="gp-point">
-<img src="gp.jpg" alt="GP Point">
-<h3>GP Point 6% - 30</h3>
-<p>Gutta Percha Point 6% / 30</p>
-<span class="stock">In Stock ✅</span>
-<a href="https://wa.me/8801631268054?text=I%20want%20GP%20POINT%206%25%20-%2030" class="order-btn">Order on WhatsApp</a>
-</article>
-
-</div>
-</section>
-<!-- ALGINATE 3 PRODUCTS -->
-<section class="alginate-products" id="alginateSec">
-<h2>Alginate Impression Materials</h2>
-<div class="alginate-grid">
-<article class="product-card" data-category="impression">
-<img src="tropical.jpg" alt="Zhermack Tropicalgin">
-<h3>Zhermack Tropicalgin</h3>
-<p>Fast Setting Alginate - Tropical Flavour</p>
-<span class="stock">In Stock ✅</span>
-<a href="https://wa.me/8801631268054?text=I%20want%20Zhermack%20Tropicalgin" class="order-btn">Order on WhatsApp</a>
-</article>
-<article class="product-card" data-category="impression">
-<img src="alginate.jpg" alt="Dental Alginate">
-<h3>Dental Alginate</h3>
-<p>High Accuracy Alginate Impression Material</p>
-<span class="stock">In Stock ✅</span>
-<a href="https://wa.me/8801631268054?text=I%20want%20Dental%20Alginate" class="order-btn">Order on WhatsApp</a>
-</article>
-<article class="product-card" data-category="impression">
-<img src="hygedent.jpg" alt="Hygedent Alginate">
-<h3>Hygedent Alginate</h3>
-<p>Premium Alginate - Dust Free</p>
-<span class="stock">In Stock ✅</span>
-<a href="https://wa.me/8801631268054?text=I%20want%20Hygedent%20Alginate" class="order-btn">Order on WhatsApp</a>
-</article>
-</div>
-</section>
-<div class="cats">
-<div class="cat">🦷 Dental Instruments</div>
-<div class="cat">🪥 Oral Care</div>
-<div class="cat">✨ Whitening</div>
-<div class="cat">🏥 Clinic Items</div>
-</div>
-<div class="trust">
-<div>🚚<br>Fast Delivery</div><div>✅<br>Original Product</div><div>💬<br>WhatsApp Order</div>
-</div>
-<div class="sec" id="products">
-<h2><span>Trending</span> Products</h2>
-<div class="grid" id="trendGrid">
-<div class="card" data-category="surgical"><div class="img">🦷<span class="off">38% off</span></div><div class="card-body"><h3>Dentamax Dental Mirror Set Premium</h3><div class="price"><b>৳750</b><s>৳1200</s></div><a class="buy" href="https://wa.me/8801631268054?text=I want Dental Mirror Set">Order on WhatsApp</a></div></div>
-<div class="card" data-category="composite"><div class="img">😁<span class="off">43% off</span></div><div class="card-body"><h3>Dentamax Teeth Whitening Kit</h3><div class="price"><b>৳1090</b><s>৳1900</s></div><a class="buy" href="https://wa.me/8801631268054?text=I want Whitening Kit">Order on WhatsApp</a></div></div>
-<div class="card" data-category="composite"><div class="img">🪥<span class="off">38% off</span></div><div class="card-body"><h3>Dentamax Electric Toothbrush Pro</h3><div class="price"><b>৳1450</b><s>৳2300</s></div><a class="buy" href="https://wa.me/8801631268054?text=I want Toothbrush">Order on WhatsApp</a></div></div>
-
-<div class="card" data-category="surgical" style="overflow:hidden"><div style="height:230px;overflow:hidden;background:linear-gradient(135deg,#1a3a5a,#2a5a8a)"><img id="runyesMain" src="runyes-xray-fullset.jpg.jpeg" alt="Runyes X-Ray" onclick="window.open(this.src,'_blank')" style="width:100%;height:100%;object-fit:cover;background:transparent;cursor:zoom-in"><span class="off">NEW</span></div><div style="display:flex;gap:5px;padding:5px;background:#fff;height:65px"><img src="runyes-xray-fullset.jpg.jpeg" onclick="document.getElementById('runyesMain').src=this.src" style="width:33%;height:100%;object-fit:cover;background:#eef2f7;border:1px solid #ddd;border-radius:4px;cursor:pointer"><img src="runyes-xray-display.jpg.jpeg" onclick="document.getElementById('runyesMain').src=this.src" style="width:33%;height:100%;object-fit:cover;background:#eef2f7;border:1px solid #ddd;border-radius:4px;cursor:pointer"><img src="runyes-xray-main.jpg.jpeg" onclick="document.getElementById('runyesMain').src=this.src" style="width:33%;height:100%;object-fit:cover;background:#eef2f7;border:1px solid #ddd;border-radius:4px;cursor:pointer"></div><div class="card-body"><h3>Runyes Portable Dental X-Ray Machine</h3><p>Original Runyes - 70kV 2mA - Full Set - Full Box</p><a class="buy" href="https://wa.me/8801631268054?text=Assalamualaikum%20KFTDENTAMAX%20Runyes%20X-Ray%20dam%20koto">📞 অর্ডার করুন</a></div></div>
+<div class="section">
+<h2>Endodontics - GP Point <span style="color:#0a7a42;font-size:14px">View All ›</span></h2>
+<div class="products">
+<div class="card"><img src="gp.jpg"><h4>GP Point 15 - 2%</h4><div class="price">৳ 350</div><button>Add to Cart</button></div>
+<div class="card"><img src="gp.jpg"><h4>GP Point 20 - 2%</h4><div class="price">৳ 350</div><button>Add to Cart</button></div>
+<div class="card"><img src="gp.jpg"><h4>GP Point 25 - 2%</h4><div class="price">৳ 350</div><button>Add to Cart</button></div>
+<div class="card"><img src="gp.jpg"><h4>GP Point 30 - 2%</h4><div class="price">৳ 350</div><button>Add to Cart</button></div>
+<div class="card"><img src="gp.jpg"><h4>GP Point 35 - 2%</h4><div class="price">৳ 350</div><button>Add to Cart</button></div>
+<div class="card"><img src="gp.jpg"><h4>GP Point 40 - 2%</h4><div class="price">৳ 350</div><button>Add to Cart</button></div>
+<div class="card"><img src="gp.jpg"><h4>GP Point 4% Assorted</h4><div class="price">৳ 420</div><button>Add to Cart</button></div>
+<div class="card"><img src="gp.jpg"><h4>GP Point 6% Assorted</h4><div class="price">৳ 420</div><button>Add to Cart</button></div>
 </div>
 </div>
-<a class="wa" href="https://wa.me/8801631268054?text=Assalamualaikum%20KFT%20DENTAMAX">💬</a>
-<div id="catPopup" style="display:none; position:fixed; bottom:75px; left:10px; right:10px; background:#fff; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.3); z-index:9999; padding:10px;">
-<div onclick="goCat('endodontics')" style="padding:14px; border-bottom:1px solid #eee; font-weight:bold; cursor:pointer;">🦷 Endodontics - Files, Gutta Percha, Sealer</div>
-<div onclick="goCat('gi')" style="padding:14px; border-bottom:1px solid #eee; font-weight:bold; cursor:pointer;">💊 GI & Restorative - GI Cement, Luting, ZOE</div>
-<div onclick="goCat('composite')" style="padding:14px; border-bottom:1px solid #eee; font-weight:bold; cursor:pointer;">✨ Composite & Bonding - A2, A3, Etching</div>
-<div onclick="goCat('impression')" style="padding:14px; border-bottom:1px solid #eee; font-weight:bold; cursor:pointer;">👄 Impression - Alginate, Putty, Light Body</div>
-<div onclick="goCat('surgical')" style="padding:14px; border-bottom:1px solid #eee; font-weight:bold; cursor:pointer;">🩺 Surgical Instruments - Forceps, Elevator</div>
-<div onclick="goCat('handpiece')" style="padding:14px; border-bottom:1px solid #eee; font-weight:bold; cursor:pointer;">⚙️ Handpiece & Equipment - Cartridge, Chair</div>
-<div onclick="goCat('all')" style="padding:14px; border-bottom:1px solid #eee; font-weight:bold; cursor:pointer; color:#0A5C36;">🏠 সব প্রোডাক্ট দেখুন</div>
-<div onclick="closeCat()" style="text-align:center; padding:10px; color:red; font-weight:bold; cursor:pointer;">✕ বন্ধ করুন</div>
+
+<div class="section"><h2>Best Seller</h2><p>Calcium Hydroxide, Zinc Oxide, Rotary Files - Coming Soon. Apnar jeta lagbe WhatsApp e bolen.</p></div>
+
 </div>
-<div class="bottom">
-<a href="javascript:void(0)" onclick="openCat()">☰<br>Category</a>
-<a href="#" class="home">⌂</a>
-<a href="#">🛒<br>Cart</a>
-<a href="https://wa.me/8801631268054">🚚<br>Track Order</a>
 </div>
-<script>
-function openCat(){ var p = document.getElementById('catPopup'); if(p.style.display === 'none'){ p.style.display = 'block'; } else { p.style.display = 'none'; } }
-function closeCat(){ document.getElementById('catPopup').style.display = 'none'; }
-function goCat(cat){
-closeCat();
-if(cat === 'all'){
-document.querySelectorAll('.product-card, .card').forEach(function(c){ c.style.display = ''; });
-document.getElementById('endoSec').style.display = 'block';
-document.getElementById('alginateSec').style.display = 'block';
-document.getElementById('products').style.display = 'block';
-window.scrollTo({top: 400, behavior:'smooth'});
-return;
-}
-var found = false;
-document.querySelectorAll('.product-card, .card').forEach(function(c){
-if(c.getAttribute('data-category') === cat){ c.style.display = ''; found = true; } else { c.style.display = 'none'; }
-});
-var endoVisible = false;
-document.querySelectorAll('#endoSec .product-card').forEach(function(c){ if(c.style.display !== 'none') endoVisible = true; });
-document.getElementById('endoSec').style.display = endoVisible ? 'block' : 'none';
-var algiVisible = false;
-document.querySelectorAll('#alginateSec .product-card').forEach(function(c){ if(c.style.display !== 'none') algiVisible = true; });
-document.getElementById('alginateSec').style.display = algiVisible ? 'block' : 'none';
-var trendVisible = false;
-document.querySelectorAll('#trendGrid .card').forEach(function(c){ if(c.style.display !== 'none') trendVisible = true; });
-document.getElementById('products').style.display = trendVisible ? 'block' : 'none';
-window.scrollTo({top: 350, behavior:'smooth'});
-if(!found){ setTimeout(function(){ alert('এই ক্যাটাগরির প্রোডাক্ট খুব শীঘ্রই আসছে। WhatsApp এ অর্ডার করতে পারেন: 01631268054'); }, 400); }
-}
-</script>
-  <style>
-.card img, .product-card img{cursor:zoom-in !important;object-fit:contain !important}
-.card, .product-card{overflow:visible !important}
-</style>
-<script>
-document.addEventListener('click',function(e){
-  if(e.target.tagName==='IMG'){
-    var p = e.target.closest('.card, .product-card, .product, [class*="product"]');
-    if(p){ window.open(e.target.src,'_blank'); }
-  }
-});
-</script>
-  <style>
-.card img{cursor:zoom-in !important}
-.card .img img{object-fit:contain !important;width:100% !important;height:100% !important}
-</style>
-<script>
-document.addEventListener('click',function(e){
-  if(e.target.tagName==='IMG' && e.target.closest('.card')){
-    window.open(e.target.src,'_blank');
-  }
-});
-</script>
+
 </body>
 </html>
