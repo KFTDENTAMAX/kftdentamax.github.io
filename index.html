@@ -3,103 +3,138 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KFT Dentamax - SMILE EVERY DAY</title>
+<title>KFT DENTAMAX INTERNATIONAL</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-.topbar{background:#1a2a4a;color:#fff;font-size:12px;padding:8px 20px;display:flex;justify-content:space-between}
-.topbar a{color:#fff;text-decoration:none;margin-left:15px}
-header{display:flex;align-items:center;gap:20px;padding:12px 20px;background:#fff}
-.logo{font-size:24px;font-weight:900;color:#0a7a42;line-height:1}
-.logo span{font-size:11px;letter-spacing:2px;color:#333;display:block}
-.search{flex:1;display:flex;border:1px solid #ddd;border-radius:25px;overflow:hidden;background:#f9f9f9}
-.search input{flex:1;padding:11px 15px;border:0;outline:none;background:transparent}
-.search button{background:#fff;border:0;padding:0 15px;cursor:pointer;font-size:18px}
-.phone{font-weight:800;color:#0a7a42;white-space:nowrap}
-.nav{background:#1a2a4a;color:#fff;display:flex;align-items:center;gap:25px;padding:0 20px;position:relative}
-.nav a{color:#fff;text-decoration:none;padding:14px 0;font-weight:600;font-size:14px}
-.allcat{background:#ff6b00;padding:14px 18px !important;font-weight:800}
-.nav .icons{margin-left:auto;font-size:20px;display:flex;gap:15px}
-.main{display:flex;gap:15px;padding:15px 20px;background:#f4f4f4;align-items:flex-start}
-.sidebar{width:270px;background:#fff;border-radius:8px;overflow:hidden;flex-shrink:0;box-shadow:0 2px 8px #ddd}
-.sidebar h3{background:#0a7a42;color:#fff;padding:13px 15px;font-size:15px}
-.cat{position:relative;border-bottom:1px solid #eee}
-.cat > a{display:flex;align-items:center;gap:10px;padding:12px 15px;color:#222;text-decoration:none;font-weight:600}
-.cat > a img{width:28px;height:28px;object-fit:contain;border-radius:50%;background:#eef7f1}
-.cat:hover{background:#e8f8ef}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+.topbar{background:#0f2040;color:#fff;font-size:12px;padding:8px 20px;display:flex;justify-content:space-between}
+.topbar a{color:#fff;text-decoration:none;margin-left:16px}
+header{display:flex;align-items:center;gap:22px;padding:16px 20px;background:#fff;position:sticky;top:0;z-index:99;border-bottom:1px solid #eee}
+.logo{line-height:1;white-space:nowrap}
+.logo b{font-size:28px;color:#0a7a42;letter-spacing:1px}
+.logo i{font-size:13px;color:#0f2040;letter-spacing:5px;font-style:normal;display:block;margin-top:3px;font-weight:800}
+.logo small{display:block;font-size:10px;color:#888;letter-spacing:2px;margin-top:3px}
+.search{flex:1;display:flex;border:1px solid #ddd;border-radius:30px;overflow:hidden;background:#f8f8f8}
+.search input{flex:1;padding:13px 18px;border:0;outline:none;background:transparent;font-size:15px}
+.search button{background:#0a7a42;color:#fff;border:0;padding:0 24px;cursor:pointer;font-size:18px}
+.hicons{display:flex;gap:16px;font-size:22px}
+.nav{background:#0f2040;color:#fff;display:flex;align-items:center;gap:28px;padding:0 20px}
+.nav a{color:#fff;text-decoration:none;padding:14px 0;font-size:14px;font-weight:600}
+.allcat{background:#ff6b00 !important;padding:14px 20px !important}
+.main{display:flex;gap:18px;padding:18px 20px;background:#f2f4f7;align-items:flex-start}
+.sidebar{width:300px;background:#fff;border-radius:10px;overflow:hidden;flex-shrink:0;box-shadow:0 2px 10px #ddd}
+.sidebar h3{background:#0a7a42;color:#fff;padding:14px 16px;font-size:15px}
+.cat{position:relative;border-bottom:1px solid #f0f0f0}
+.cat>a{display:flex;align-items:center;gap:11px;padding:13px 15px;color:#222;text-decoration:none;font-weight:600;font-size:14px}
+.cat>a img{width:32px;height:32px;object-fit:contain;border-radius:50%;background:#eef7f1;padding:2px}
+.cat:hover{background:#e9f9ef}
 .cat:hover .sub{display:block}
-.sub{display:none;position:absolute;left:270px;top:0;width:260px;background:#fff;box-shadow:0 5px 20px #aaa;border-radius:0 8px 8px 0;padding:8px;z-index:100}
-.sub a{display:block;padding:10px;color:#333;text-decoration:none;border-bottom:1px solid #f0f0f0}
-.sub a:hover{color:#0a7a42;font-weight:bold}
+.sub{display:none;position:absolute;left:300px;top:0;width:280px;background:#fff;box-shadow:0 8px 25px #999;border-radius:0 10px 10px 0;padding:8px;z-index:100}
+.sub a{display:flex;align-items:center;gap:8px;padding:11px;color:#333;text-decoration:none;font-size:14px;border-bottom:1px solid #f5f5f5}
+.sub a:hover{color:#0a7a42;font-weight:bold;background:#f9f9f9}
+.sub a img{width:30px;height:30px;object-fit:contain}
 .right{flex:1}
-.banner{background:linear-gradient(90deg,#0a7a42,#00b45a);color:#fff;border-radius:12px;padding:28px 30px}
-.banner h1{font-size:34px;line-height:1.2}
-.banner p{margin:10px 0}
-.banner button{background:#ff6b00;border:0;color:#fff;padding:12px 22px;border-radius:25px;font-weight:bold;cursor:pointer}
-.featured{background:#fff;margin-top:15px;padding:20px;border-radius:10px;text-align:center}
-.featured h2{margin-bottom:18px;font-weight:700}
-.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.feat{border:1px solid #eee;border-radius:10px;padding:12px}
+.welcome{background:#fff;padding:20px 22px;border-radius:10px;display:flex;justify-content:space-between;align-items:center}
+.welcome h1{font-size:22px;color:#0f2040}
+.welcome p{color:#666;font-size:14px;margin-top:5px}
+.welcome button{background:#0a7a42;color:#fff;border:0;padding:11px 20px;border-radius:25px;font-weight:bold;cursor:pointer}
+.featured{background:#fff;margin-top:16px;padding:20px;border-radius:10px;text-align:center}
+.featured h2{font-size:20px;margin-bottom:18px}
+.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.feat{border:1px solid #eee;border-radius:12px;padding:14px;cursor:pointer}
 .feat img{width:100%;height:150px;object-fit:contain}
 .feat b{display:block;margin-top:8px}
 .feat span{font-size:12px;color:#888}
-.section{margin-top:15px;background:#fff;padding:18px;border-radius:10px}
-.section h2{margin-bottom:15px;display:flex;justify-content:space-between}
+.section{margin-top:16px;background:#fff;padding:20px;border-radius:10px}
+.section h2{display:flex;justify-content:space-between;margin-bottom:16px;font-size:19px}
 .products{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.card{border:1px solid #eee;border-radius:10px;padding:10px;text-align:center}
-.card img{width:100%;height:220px;object-fit:contain;background:#fff}
+.card{border:1px solid #eee;border-radius:12px;padding:12px;text-align:center}
+.card img{width:100%;height:220px;object-fit:contain}
 .card h4{font-size:14px;margin:8px 0}
 .price{color:#e60000;font-weight:800;font-size:18px}
-.card button{margin-top:8px;background:#0a7a42;color:#fff;border:0;padding:9px;width:100%;border-radius:20px;cursor:pointer}
-.whatsapp{position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;width:55px;height:55px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;z-index:999;box-shadow:0 4px 12px #888}
-@media(max-width:768px){.main{flex-direction:column}.sidebar{width:100%}.sub{left:0;top:100%;width:100%}.products,.feat-grid{grid-template-columns:repeat(2,1fr)}header{flex-wrap:wrap}.search{order:3;width:100%}.phone{display:none}}
+.old{color:#999;text-decoration:line-through;font-size:13px;margin-left:5px}
+.card button{margin-top:9px;background:#0a7a42;color:#fff;border:0;padding:10px;width:100%;border-radius:22px;cursor:pointer;font-weight:bold}
+.footer{background:#0f2040;color:#fff;text-align:center;padding:20px;margin-top:16px;font-size:13px}
+/* SIDE FLOATING - WHATSAPP / MESSENGER */
+.float-side{position:fixed;right:14px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px;z-index:999}
+.float-side a{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none;color:#fff;box-shadow:0 4px 12px #888;position:relative}
+.float-side a span{position:absolute;right:62px;background:#111;color:#fff;font-size:12px;padding:6px 10px;border-radius:15px;white-space:nowrap;opacity:0;transition:.3s}
+.float-side a:hover span{opacity:1}
+.wa{background:#25D366}.msg{background:#0084FF}.call{background:#0a7a42}
+@media(max-width:768px){.main{flex-direction:column}.sidebar{width:100%}.sub{left:0;top:100%;width:100%}.products,.feat-grid{grid-template-columns:repeat(2,1fr)}header{flex-wrap:wrap}.search{order:3;width:100%}}
 </style>
 </head>
 <body>
 
-<div class="topbar"><span>📍 Sadullahpur, Rangpur &nbsp; | &nbsp; Get offers on your first order</span><span><a href="#">Sell On Store</a><a href="#">Track Order</a><a href="#">Help</a></span></div>
+<div class="topbar"><span>📍 Sadullahpur, Rangpur | 100% Original Dental Products</span><span><a href="#">Sell On Store</a><a href="#">Track Order</a><a href="#">Help</a></span></div>
 
 <header>
-<div class="logo">KFT DENTAMAX<span>SMILE EVERY DAY</span></div>
-<div class="search"><input placeholder="Search for products"><button>🔍</button></div>
-<div class="phone">📞 017XX-XXXXXX</div>
+<div class="logo"><b>KFT DENTAMAX</b><i>INTERNATIONAL</i><small>SMILE EVERY DAY • EST. RANGPUR</small></div>
+<div class="search"><input placeholder="Search GP Point, Files, Calcium..."><button>🔍</button></div>
+<div class="hicons"><span>♡</span><span>🛒</span><span>👤</span></div>
 </header>
 
-<div class="nav"><a href="#" class="allcat">☰ All Categories</a><a href="#">Home</a><a href="#">Cart</a><a href="#">Checkout</a><a href="#">Shop</a><div class="icons"><span>♡</span><span>🛒</span><span>👤</span></div></div>
+<div class="nav"><a href="#" class="allcat">☰ All Categories</a><a href="#">Home</a><a href="#">Shop</a><a href="#">Cart</a><a href="#">Checkout</a><a href="#" style="margin-left:auto">📞 017XX-XXXXXX</a></div>
 
 <div class="main">
 <div class="sidebar">
-<h3>☰ All Categories</h3>
-<div class="cat"><a href="#"><img src="gp.jpg"> Endodontics <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Gutta Percha Point</a><a href="#">Rotary Files</a><a href="#">Hand Files</a><a href="#">Paper Point</a><a href="#">Calcium Hydroxide</a></div></div>
-<div class="cat"><a href="#"><img src="gp.jpg"> Restorative <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Composite</a><a href="#">Glass Ionomer Cement</a><a href="#">Bonding Agent</a></div></div>
-<div class="cat"><a href="#"><img src="gp.jpg"> Cement & Calcium <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Zinc Oxide Eugenol</a><a href="#">MTA</a><a href="#">Calcium Paste</a></div></div>
-<div class="cat"><a href="#"><img src="gp.jpg"> Surgery <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Extraction Forceps</a><a href="#">Needle & Suture</a></div></div>
-<div class="cat"><a href="#"><img src="gp.jpg"> Ortho & Prosthetics <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Ortho Wire</a><a href="#">Bracket</a><a href="#">Alginate</a></div></div>
-<div class="cat"><a href="#"><img src="gp.jpg"> Consumables <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Gloves</a><a href="#">Cotton Roll</a><a href="#">Suction Tip</a></div></div>
+<h3>☰ All Dental Categories</h3>
+
+<!-- GP POINT - SOB EK CATEGORY TE -->
+<div class="cat"><a href="#"><img src="gp.jpg"> Gutta Percha - GP Point <span style="margin-left:auto">›</span></a>
+<div class="sub">
+<a href="#"><img src="gp.jpg"> GP Point 15 - 2%</a>
+<a href="#"><img src="gp.jpg"> GP Point 20 - 2%</a>
+<a href="#"><img src="gp.jpg"> GP Point 25 - 2%</a>
+<a href="#"><img src="gp.jpg"> GP Point 30 - 2%</a>
+<a href="#"><img src="gp.jpg"> GP Point 35 - 2%</a>
+<a href="#"><img src="gp.jpg"> GP Point 40 - 2%</a>
+<a href="#"><img src="gp.jpg"> GP Point 4% Assorted</a>
+<a href="#"><img src="gp.jpg"> GP Point 6% Assorted</a>
+</div></div>
+
+<div class="cat"><a href="#"><img src="gp.jpg"> Endodontics <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Rotary Files</a><a href="#">Hand Files</a><a href="#">Paper Point</a><a href="#">Calcium Hydroxide</a><a href="#">Irrigation Solution</a><a href="#">Apex Locator</a></div></div>
+<div class="cat"><a href="#"><img src="gp.jpg"> Restorative <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Composite Resin</a><a href="#">Glass Ionomer Cement</a><a href="#">Bonding Agent</a><a href="#">Etchant</a><a href="#">Polishing Kit</a></div></div>
+<div class="cat"><a href="#"><img src="gp.jpg"> Cement & Calcium <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Zinc Oxide Eugenol</a><a href="#">MTA</a><a href="#">Resin Cement</a><a href="#">Temporary Cement</a></div></div>
+<div class="cat"><a href="#"><img src="gp.jpg"> Oral Surgery <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Extraction Forceps</a><a href="#">Surgical Burs</a><a href="#">Needle & Suture</a><a href="#">Bone Graft</a></div></div>
+<div class="cat"><a href="#"><img src="gp.jpg"> Orthodontics <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Metal Bracket</a><a href="#">Ortho Wire</a><a href="#">Elastic & Chain</a></div></div>
+<div class="cat"><a href="#"><img src="gp.jpg"> Prosthetics & Lab <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Alginate</a><a href="#">Putty & Light Body</a><a href="#">Stone & Plaster</a></div></div>
+<div class="cat"><a href="#"><img src="gp.jpg"> Periodontics <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Scaler Tips</a><a href="#">Curettes</a><a href="#">Gingival Retraction</a></div></div>
+<div class="cat"><a href="#"><img src="gp.jpg"> Pedodontics <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Kids Crown</a><a href="#">Fluoride Varnish</a><a href="#">Fissure Sealant</a></div></div>
+<div class="cat"><a href="#"><img src="gp.jpg"> Instruments <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Diagnostic Set</a><a href="#">Mouth Mirror</a><a href="#">Explorer & Probe</a></div></div>
+<div class="cat"><a href="#"><img src="gp.jpg"> Consumables <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Gloves</a><a href="#">Cotton Roll</a><a href="#">Suction Tip</a><a href="#">Face Mask</a></div></div>
+<div class="cat"><a href="#"><img src="gp.jpg"> Equipment <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Light Cure</a><a href="#">Endo Motor</a><a href="#">Ultrasonic Scaler</a></div></div>
 </div>
 
 <div class="right">
-<div class="banner"><p>WELCOME TO KFT DENTAMAX</p><h1>Original Dental<br>Products, Best Price</h1><p>GP Point, Files, Calcium - Sob Kichu Ek Jaigai</p><button>Shop Now →</button></div>
+<div class="welcome"><div><h1>Welcome to KFT Dentamax International</h1><p>Doctors & Clinics er jonno 100% Original Dental Products - Best Wholesale Price in Bangladesh</p></div><button>Shop All →</button></div>
 
 <div class="featured"><h2>Featured Categories</h2><div class="feat-grid">
-<div class="feat"><img src="gp.jpg"><b>Endodontics</b><span>8 products</span></div>
-<div class="feat"><img src="gp.jpg"><b>Gutta Percha</b><span>12 products</span></div>
-<div class="feat"><img src="gp.jpg"><b>Calcium & Cement</b><span>9 products</span></div>
-<div class="feat"><img src="gp.jpg"><b>Consumables</b><span>7 products</span></div>
+<div class="feat"><img src="gp.jpg"><b>GP Point</b><span>8 products</span></div>
+<div class="feat"><img src="gp.jpg"><b>Endodontics</b><span>Files • Calcium</span></div>
+<div class="feat"><img src="gp.jpg"><b>Restorative</b><span>Composite • GIC</span></div>
+<div class="feat"><img src="gp.jpg"><b>Consumables</b><span>Gloves • Cotton</span></div>
 </div></div>
 
-<div class="section"><h2>Endodontics - GP Point <span style="color:#0a7a42;font-size:14px">View All ›</span></h2><div class="products">
-<div class="card"><img src="gp.jpg"><h4>GP Point 15 - 2%</h4><div class="price">৳ 350</div><button>Add to Cart</button></div>
-<div class="card"><img src="gp.jpg"><h4>GP Point 20 - 2%</h4><div class="price">৳ 350</div><button>Add to Cart</button></div>
-<div class="card"><img src="gp.jpg"><h4>GP Point 25 - 2%</h4><div class="price">৳ 350</div><button>Add to Cart</button></div>
-<div class="card"><img src="gp.jpg"><h4>GP Point 30 - 2%</h4><div class="price">৳ 350</div><button>Add to Cart</button></div>
-<div class="card"><img src="gp.jpg"><h4>GP Point 35 - 2%</h4><div class="price">৳ 350</div><button>Add to Cart</button></div>
-<div class="card"><img src="gp.jpg"><h4>GP Point 40 - 2%</h4><div class="price">৳ 350</div><button>Add to Cart</button></div>
-<div class="card"><img src="gp.jpg"><h4>GP Point 4% Assorted</h4><div class="price">৳ 420</div><button>Add to Cart</button></div>
-<div class="card"><img src="gp.jpg"><h4>GP Point 6% Assorted</h4><div class="price">৳ 420</div><button>Add to Cart</button></div>
+<div class="section"><h2>Gutta Percha - GP Point <span style="color:#0a7a42;font-size:14px">View All ›</span></h2><div class="products">
+<div class="card"><img src="gp.jpg"><h4>GP Point 15 - 2%</h4><div><span class="price">৳ 350</span><span class="old">৳ 450</span></div><button>Add to Cart</button></div>
+<div class="card"><img src="gp.jpg"><h4>GP Point 20 - 2%</h4><div><span class="price">৳ 350</span><span class="old">৳ 450</span></div><button>Add to Cart</button></div>
+<div class="card"><img src="gp.jpg"><h4>GP Point 25 - 2%</h4><div><span class="price">৳ 350</span><span class="old">৳ 450</span></div><button>Add to Cart</button></div>
+<div class="card"><img src="gp.jpg"><h4>GP Point 30 - 2%</h4><div><span class="price">৳ 350</span><span class="old">৳ 450</span></div><button>Add to Cart</button></div>
+<div class="card"><img src="gp.jpg"><h4>GP Point 35 - 2%</h4><div><span class="price">৳ 350</span><span class="old">৳ 450</span></div><button>Add to Cart</button></div>
+<div class="card"><img src="gp.jpg"><h4>GP Point 40 - 2%</h4><div><span class="price">৳ 350</span><span class="old">৳ 450</span></div><button>Add to Cart</button></div>
+<div class="card"><img src="gp.jpg"><h4>GP Point 4% Assorted</h4><div><span class="price">৳ 420</span><span class="old">৳ 520</span></div><button>Add to Cart</button></div>
+<div class="card"><img src="gp.jpg"><h4>GP Point 6% Assorted</h4><div><span class="price">৳ 420</span><span class="old">৳ 520</span></div><button>Add to Cart</button></div>
 </div></div>
 </div>
 </div>
 
-<a class="whatsapp" href="https://wa.me/8801700000000">💬</a>
+<!-- SIDE FLOATING BUTTONS -->
+<div class="float-side">
+<a class="wa" href="https://wa.me/8801700000000" target="_blank">💬<span>WhatsApp Order</span></a>
+<a class="msg" href="https://m.me/kftdentamax" target="_blank">💙<span>Messenger</span></a>
+<a class="call" href="tel:01700000000">📞<span>Call Now</span></a>
+</div>
+
+<div class="footer">© 2026 KFT DENTAMAX INTERNATIONAL | Sadullahpur, Rangpur | SMILE EVERY DAY</div>
 </body>
 </html>
