@@ -6,88 +6,99 @@
 <title>KFT DENTAMAX INTERNATIONAL</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
-.topbar{background:#0f2040;color:#fff;font-size:12px;padding:8px 20px;display:flex;justify-content:space-between}
-.topbar a{color:#fff;text-decoration:none;margin-left:16px}
-header{display:flex;align-items:center;gap:22px;padding:16px 20px;background:#fff;position:sticky;top:0;z-index:99;border-bottom:1px solid #eee}
-.logo{line-height:1;white-space:nowrap}.logo b{font-size:28px;color:#0a7a42}.logo i{font-size:13px;color:#0f2040;letter-spacing:5px;font-style:normal;display:block;margin-top:3px;font-weight:800}.logo small{display:block;font-size:10px;color:#888;letter-spacing:2px;margin-top:3px}
-.search{flex:1;display:flex;border:1px solid #ddd;border-radius:30px;overflow:hidden;background:#f8f8f8}.search input{flex:1;padding:13px 18px;border:0;outline:none;background:transparent;font-size:15px}.search button{background:#0a7a42;color:#fff;border:0;padding:0 24px;cursor:pointer;font-size:18px}
-.hicons{display:flex;gap:16px;font-size:22px}
-.nav{background:#0f2040;color:#fff;display:flex;align-items:center;gap:28px;padding:0 20px}.nav a{color:#fff;text-decoration:none;padding:14px 0;font-size:14px;font-weight:600}.allcat{background:#ff6b00 !important;padding:14px 20px !important}
+.topbar{background:#0f2040;color:#fff;font-size:12px;padding:8px 20px;display:flex;justify-content:space-between}.topbar a{color:#fff;text-decoration:none;margin-left:16px}
+/* LIVE LINE - UPORE CHOLBE */
+.marquee{background:#ff6b00;color:#fff;overflow:hidden;white-space:nowrap;padding:9px 0;font-weight:700;font-size:14px}
+.marquee-inner{display:inline-block;animation:scroll 25s linear infinite}
+.marquee-inner a{color:#fff;text-decoration:none;background:#0f2040;padding:4px 14px;border-radius:20px;margin:0 10px}
+@keyframes scroll{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
+header{display:flex;align-items:center;gap:18px;padding:14px 20px;background:#fff;position:sticky;top:0;z-index:99;border-bottom:1px solid #eee}
+.logo{line-height:1;white-space:nowrap}.logo b{font-size:27px;color:#0a7a42}.logo i{font-size:13px;color:#0f2040;letter-spacing:5px;font-style:normal;display:block;margin-top:3px;font-weight:800}.logo small{display:block;font-size:10px;color:#888;letter-spacing:2px;margin-top:3px}
+.search{flex:1;display:flex;border:1px solid #ddd;border-radius:30px;overflow:hidden;background:#f8f8f8}.search input{flex:1;padding:13px 18px;border:0;outline:none;background:transparent;font-size:15px}.search button{background:#0a7a42;color:#fff;border:0;padding:0 22px;cursor:pointer;font-size:18px}
+.nav{background:#0f2040;color:#fff;display:flex;align-items:center;gap:26px;padding:0 20px}.nav a{color:#fff;text-decoration:none;padding:14px 0;font-size:14px;font-weight:600}
 .main{display:flex;gap:18px;padding:18px 20px;background:#f2f4f7;align-items:flex-start}
-.sidebar{width:300px;background:#fff;border-radius:10px;overflow:hidden;flex-shrink:0;box-shadow:0 2px 10px #ddd}.sidebar h3{background:#0a7a42;color:#fff;padding:14px 16px;font-size:15px}
-.cat{position:relative;border-bottom:1px solid #f0f0f0}.cat>a{display:flex;align-items:center;gap:11px;padding:13px 15px;color:#222;text-decoration:none;font-weight:600;font-size:14px}.cat>a img{width:32px;height:32px;object-fit:contain;border-radius:50%;background:#eef7f1;padding:2px}.cat:hover{background:#e9f9ef}.cat:hover .sub{display:block}
+/* SIDEBAR HIDE - KFT BUTTON */
+.sidebar{width:70px;background:#fff;border-radius:10px;overflow:hidden;flex-shrink:0;box-shadow:0 2px 10px #ddd;transition:.3s}
+.sidebar.open{width:300px}
+.kft-btn{background:#0a7a42;color:#fff;border:0;width:100%;padding:14px;cursor:pointer;text-align:center}
+.kft-btn b{display:block;font-size:20px;letter-spacing:1px}.kft-btn span{font-size:11px}
+.cat{position:relative;border-bottom:1px solid #f0f0f0;display:none}.sidebar.open .cat{display:block}
+.cat>a{display:flex;align-items:center;gap:11px;padding:13px 15px;color:#222;text-decoration:none;font-weight:600;font-size:14px}.cat>a img{width:32px;height:32px;object-fit:contain;border-radius:50%;background:#eef7f1;padding:2px}.cat:hover{background:#e9f9ef}
+.cat:hover .sub{display:block}
 .sub{display:none;position:absolute;left:300px;top:0;width:280px;background:#fff;box-shadow:0 8px 25px #999;border-radius:0 10px 10px 0;padding:8px;z-index:100}.sub a{display:flex;align-items:center;gap:8px;padding:11px;color:#333;text-decoration:none;font-size:14px;border-bottom:1px solid #f5f5f5}.sub a:hover{color:#0a7a42;font-weight:bold}.sub a img{width:30px;height:30px;object-fit:contain}
-.right{flex:1}.welcome{background:#fff;padding:20px 22px;border-radius:10px;display:flex;justify-content:space-between;align-items:center}.welcome h1{font-size:22px;color:#0f2040}.welcome p{color:#666;font-size:14px;margin-top:5px}.welcome button{background:#0a7a42;color:#fff;border:0;padding:11px 20px;border-radius:25px;font-weight:bold;cursor:pointer}
-.featured{background:#fff;margin-top:16px;padding:20px;border-radius:10px;text-align:center}.featured h2{font-size:20px;margin-bottom:18px}.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.feat{border:1px solid #eee;border-radius:12px;padding:14px}.feat img{width:100%;height:150px;object-fit:contain}.feat b{display:block;margin-top:8px}.feat span{font-size:12px;color:#888}
-.section{margin-top:16px;background:#fff;padding:20px;border-radius:10px}.section h2{display:flex;justify-content:space-between;margin-bottom:16px;font-size:19px}
-.products{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{border:1px solid #eee;border-radius:12px;padding:12px;text-align:center}.card img{width:100%;height:220px;object-fit:contain}.card h4{font-size:14px;margin:8px 0}.price{color:#e60000;font-weight:800;font-size:18px}.old{color:#999;text-decoration:line-through;font-size:13px;margin-left:5px}.card button{margin-top:9px;background:#0a7a42;color:#fff;border:0;padding:10px;width:100%;border-radius:22px;cursor:pointer;font-weight:bold}
+.right{flex:1}.welcome{background:#fff;padding:20px;border-radius:10px}.welcome h1{font-size:22px;color:#0f2040}.welcome p{color:#666;font-size:14px;margin-top:5px}
+.featured{background:#fff;margin-top:16px;padding:20px;border-radius:10px;text-align:center}.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.feat{border:1px solid #eee;border-radius:12px;padding:14px;text-decoration:none;color:#222;display:block}.feat img{width:100%;height:150px;object-fit:contain}.feat b{display:block;margin-top:8px}.feat span{font-size:12px;color:#888}
+.section{margin-top:16px;background:#fff;padding:20px;border-radius:10px;scroll-margin-top:120px}.section h2{margin-bottom:16px;font-size:19px}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{border:1px solid #eee;border-radius:12px;padding:12px;text-align:center}.card img{width:100%;height:220px;object-fit:contain;cursor:pointer}.card h4{font-size:14px;margin:8px 0}.card h4 a{color:#222;text-decoration:none}.price{color:#e60000;font-weight:800;font-size:18px}.old{color:#999;text-decoration:line-through;font-size:13px;margin-left:5px}
+.buy{display:block;margin-top:9px;background:#25D366;color:#fff;text-decoration:none;padding:11px;border-radius:22px;font-weight:bold}
+.buy:hover{background:#0a7a42}
 .footer{background:#0f2040;color:#fff;text-align:center;padding:20px;margin-top:16px;font-size:13px}
-.float-side{position:fixed;right:14px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px;z-index:999}.float-side a{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none;color:#fff;box-shadow:0 4px 12px #888;position:relative}.float-side a span{position:absolute;right:62px;background:#111;color:#fff;font-size:12px;padding:6px 10px;border-radius:15px;white-space:nowrap;opacity:0}.float-side a:hover span{opacity:1}.wa{background:#25D366}.msg{background:#0084FF}.call{background:#0a7a42}
-@media(max-width:768px){.main{flex-direction:column}.sidebar{width:100%}.sub{left:0;top:100%;width:100%}.products,.feat-grid{grid-template-columns:repeat(2,1fr)}header{flex-wrap:wrap}.search{order:3;width:100%}}
+.float-side{position:fixed;right:14px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px;z-index:999}.float-side a{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none;color:#fff;box-shadow:0 4px 12px #888}.wa{background:#25D366}.msg{background:#0084FF}.call{background:#0a7a42}
+@media(max-width:768px){.main{flex-direction:column}.sidebar{width:100%}.sidebar.open{width:100%}.sub{left:0;top:100%;width:100%}.products,.feat-grid{grid-template-columns:repeat(2,1fr)}header{flex-wrap:wrap}.search{order:3;width:100%}}
 </style>
 </head>
 <body>
-<div class="topbar"><span>📍 Sadullahpur, Rangpur | 100% Original Dental Products</span><span><a href="#">Sell On Store</a><a href="#">Track Order</a><a href="#">Help</a></span></div>
-<header><div class="logo"><b>KFT DENTAMAX</b><i>INTERNATIONAL</i><small>SMILE EVERY DAY • EST. RANGPUR</small></div><div class="search"><input placeholder="Search GP Point, Cartridge, X-Ray, Plex V..."><button>🔍</button></div><div class="hicons"><span>♡</span><span>🛒</span><span>👤</span></div></header>
-<div class="nav"><a href="#" class="allcat">☰ All Categories</a><a href="#">Home</a><a href="#">Shop</a><a href="#">Cart</a><a href="#">Checkout</a><a href="#" style="margin-left:auto">📞 01631-268054</a></div>
+<div class="topbar"><span>📍 Sadullahpur, Rangpur | 100% Original</span><span><a href="#">Track Order</a><a href="#">Help</a></span></div>
+
+<!-- LIVE LINE -->
+<div class="marquee"><div class="marquee-inner">
+🔥 GP Point 15 - BUY NOW <a href="https://wa.me/8801631268054?text=GP%20Point%2015%20nite%20chai">BUY NOW</a> • KFT Cartridge - BUY NOW <a href="https://wa.me/8801631268054?text=KFT%20Cartridge%20nite%20chai">BUY NOW</a> • Plex V - BUY NOW <a href="https://wa.me/8801631268054?text=Plex%20V%20nite%20chai">BUY NOW</a> • Runyes X-Ray - BUY NOW <a href="https://wa.me/8801631268054?text=Runyes%20X-Ray%20nite%20chai">BUY NOW</a> • Hygedent - BUY NOW <a href="https://wa.me/8801631268054?text=Hygedent%20nite%20chai">BUY NOW</a> • Tropical - BUY NOW <a href="https://wa.me/8801631268054?text=Tropical%20nite%20chai">BUY NOW</a> •
+</div></div>
+
+<header><div class="logo"><b>KFT DENTAMAX</b><i>INTERNATIONAL</i><small>SMILE EVERY DAY • EST. RANGPUR</small></div><div class="search"><input placeholder="Search GP Point 15, Cartridge, X-Ray..."><button>🔍</button></div><div style="font-size:22px">♡ 🛒 👤</div></header>
+<div class="nav"><a href="#">Home</a><a href="#gp">GP Point</a><a href="#cartridge">Cartridge</a><a href="#xray">X-Ray</a><a href="#" style="margin-left:auto">📞 01631-268054</a></div>
+
 <div class="main">
-<div class="sidebar"><h3>☰ All Dental Categories</h3>
-<div class="cat"><a href="#"><img src="gp.jpg"> Gutta Percha - GP Point <span style="margin-left:auto">›</span></a><div class="sub"><a href="#"><img src="gp.jpg"> GP Point 15 - 2%</a><a href="#"><img src="gp.jpg"> GP Point 20 - 2%</a><a href="#"><img src="gp.jpg"> GP Point 25 - 2%</a><a href="#"><img src="gp.jpg"> GP Point 30 - 2%</a><a href="#"><img src="gp.jpg"> GP Point 35 - 2%</a><a href="#"><img src="gp.jpg"> GP Point 40 - 2%</a><a href="#"><img src="gp_meta.jpg"> GP Meta - Assorted</a></div></div>
-<div class="cat"><a href="#"><img src="kft-cartridge-1.jpeg"> Cartridge & Anesthesia <span style="margin-left:auto">›</span></a><div class="sub"><a href="#"><img src="kft-cartridge-1.jpeg"> KFT Cartridge - 1</a><a href="#"><img src="kft-cartridge-2.jpeg"> KFT Cartridge - 2</a></div></div>
-<div class="cat"><a href="#"><img src="plex-v-1.jpeg"> Plex V - Impression <span style="margin-left:auto">›</span></a><div class="sub"><a href="#"><img src="plex-v-1.jpeg"> Plex V - 1</a><a href="#"><img src="plex-v-2.jpeg"> Plex V - 2</a></div></div>
-<div class="cat"><a href="#"><img src="runyes-xray-main.jpg.jpeg"> Runyes X-Ray <span style="margin-left:auto">›</span></a><div class="sub"><a href="#"><img src="runyes-xray-main.jpg.jpeg"> Runyes X-Ray Main</a><a href="#"><img src="runyes-xray-fullset.jpg.jpeg"> Runyes X-Ray Full Set</a><a href="#"><img src="runyes-xray-display.jpg.jpeg"> Runyes X-Ray Display</a></div></div>
-<div class="cat"><a href="#"><img src="hygedent.jpg"> Hygedent & Hygiene <span style="margin-left:auto">›</span></a><div class="sub"><a href="#"><img src="hygedent.jpg"> Hygedent Product</a></div></div>
-<div class="cat"><a href="#"><img src="tropical.jpg"> Tropical & Others <span style="margin-left:auto">›</span></a><div class="sub"><a href="#"><img src="tropical.jpg"> Tropical Product</a><a href="#"><img src="images%20(2).jpeg"> Dental Product</a></div></div>
-<div class="cat"><a href="#"><img src="gp.jpg"> Endodontics <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Rotary Files</a><a href="#">Hand Files</a><a href="#">Paper Point</a><a href="#">Calcium Hydroxide</a></div></div>
-<div class="cat"><a href="#"><img src="gp.jpg"> Restorative <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Composite</a><a href="#">Glass Ionomer</a><a href="#">Bonding Agent</a></div></div>
-<div class="cat"><a href="#"><img src="gp.jpg"> Surgery <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Forceps</a><a href="#">Surgical Bur</a><a href="#">Suture</a></div></div>
-<div class="cat"><a href="#"><img src="gp.jpg"> Ortho & Prosthetics <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Bracket</a><a href="#">Ortho Wire</a><a href="#">Alginate</a></div></div>
-<div class="cat"><a href="#"><img src="gp.jpg"> Consumables <span style="margin-left:auto">›</span></a><div class="sub"><a href="#">Gloves</a><a href="#">Cotton Roll</a><a href="#">Suction Tip</a></div></div>
+<!-- LEFT - HIDE / KFT BUTTON -->
+<div class="sidebar" id="sidebar">
+<button class="kft-btn" onclick="document.getElementById('sidebar').classList.toggle('open')"><b>KFT</b><span>☰ MENU<br>চাপ দিন</span></button>
+<div class="cat"><a href="#gp"><img src="gp.jpg"> Gutta Percha - GP Point <span style="margin-left:auto">›</span></a><div class="sub"><a href="#gp"><img src="gp.jpg"> GP Point 15 - 2% - দেখুন</a></div></div>
+<div class="cat"><a href="#cartridge"><img src="kft-cartridge-1.jpeg"> Cartridge & Anesthesia <span style="margin-left:auto">›</span></a><div class="sub"><a href="#cartridge"><img src="kft-cartridge-1.jpeg"> KFT Cartridge - 1</a><a href="#cartridge"><img src="kft-cartridge-2.jpeg"> KFT Cartridge - 2</a></div></div>
+<div class="cat"><a href="#plex"><img src="plex-v-1.jpeg"> Plex V <span style="margin-left:auto">›</span></a><div class="sub"><a href="#plex"><img src="plex-v-1.jpeg"> Plex V - 1</a><a href="#plex"><img src="plex-v-2.jpeg"> Plex V - 2</a></div></div>
+<div class="cat"><a href="#xray"><img src="runyes-xray-main.jpg.jpeg"> Runyes X-Ray <span style="margin-left:auto">›</span></a><div class="sub"><a href="#xray"><img src="runyes-xray-main.jpg.jpeg"> X-Ray Main</a><a href="#xray"><img src="runyes-xray-fullset.jpg.jpeg"> X-Ray Full Set</a><a href="#xray"><img src="runyes-xray-display.jpg.jpeg"> X-Ray Display</a></div></div>
+<div class="cat"><a href="#more"><img src="hygedent.jpg"> Hygedent <span style="margin-left:auto">›</span></a><div class="sub"><a href="#more"><img src="hygedent.jpg"> Hygedent - দেখুন</a></div></div>
+<div class="cat"><a href="#more"><img src="tropical.jpg"> Tropical & Others <span style="margin-left:auto">›</span></a><div class="sub"><a href="#more"><img src="tropical.jpg"> Tropical</a><a href="#more"><img src="images%20(2).jpeg"> Dental Product</a></div></div>
 </div>
+
 <div class="right">
-<div class="welcome"><div><h1>Welcome to KFT Dentamax International</h1><p>Doctors & Clinics er jonno 100% Original Dental Products - Best Wholesale Price in Bangladesh</p></div><button>Shop All →</button></div>
-<div class="featured"><h2>Featured Categories</h2><div class="feat-grid"><div class="feat"><img src="gp.jpg"><b>GP Point</b><span>All Sizes Available</span></div><div class="feat"><img src="kft-cartridge-1.jpeg"><b>Cartridge</b><span>KFT Original</span></div><div class="feat"><img src="plex-v-1.jpeg"><b>Plex V</b><span>Impression Material</span></div><div class="feat"><img src="runyes-xray-main.jpg.jpeg"><b>Runyes X-Ray</b><span>Full Set</span></div></div></div>
+<div class="welcome"><h1>Welcome to KFT Dentamax International</h1><p>Doctors & Clinics er jonno 100% Original Dental Products - Best Wholesale Price in Bangladesh</p></div>
 
-<!-- 1. GP POINT - SOB -->
-<div class="section"><h2>Gutta Percha - GP Point <span style="color:#0a7a42;font-size:14px">View All ›</span></h2><div class="products">
-<div class="card"><img src="gp.jpg"><h4>GP Point 15 - 2%</h4><div><span class="price">৳ 350</span><span class="old">৳ 450</span></div><button>Add to Cart</button></div>
-<div class="card"><img src="gp.jpg"><h4>GP Point 20 - 2%</h4><div><span class="price">৳ 350</span><span class="old">৳ 450</span></div><button>Add to Cart</button></div>
-<div class="card"><img src="gp.jpg"><h4>GP Point 25 - 2%</h4><div><span class="price">৳ 350</span><span class="old">৳ 450</span></div><button>Add to Cart</button></div>
-<div class="card"><img src="gp.jpg"><h4>GP Point 30 - 2%</h4><div><span class="price">৳ 350</span><span class="old">৳ 450</span></div><button>Add to Cart</button></div>
-<div class="card"><img src="gp.jpg"><h4>GP Point 35 - 2%</h4><div><span class="price">৳ 350</span><span class="old">৳ 450</span></div><button>Add to Cart</button></div>
-<div class="card"><img src="gp.jpg"><h4>GP Point 40 - 2%</h4><div><span class="price">৳ 350</span><span class="old">৳ 450</span></div><button>Add to Cart</button></div>
-<div class="card"><img src="gp_meta.jpg"><h4>GP Meta - Assorted</h4><div><span class="price">৳ 420</span><span class="old">৳ 520</span></div><button>Add to Cart</button></div>
-<div class="card"><img src="gp.jpg"><h4>GP Point 4% / 6% Assorted</h4><div><span class="price">৳ 420</span><span class="old">৳ 520</span></div><button>Add to Cart</button></div>
+<div class="featured"><h2>Featured Categories - ক্লিক করলে খুলবে</h2><div class="feat-grid">
+<a class="feat" href="#gp"><img src="gp.jpg"><b>GP Point 15</b><span>Click to Open</span></a>
+<a class="feat" href="#cartridge"><img src="kft-cartridge-1.jpeg"><b>Cartridge</b><span>Click to Open</span></a>
+<a class="feat" href="#plex"><img src="plex-v-1.jpeg"><b>Plex V</b><span>Click to Open</span></a>
+<a class="feat" href="#xray"><img src="runyes-xray-main.jpg.jpeg"><b>Runyes X-Ray</b><span>Click to Open</span></a>
 </div></div>
 
-<!-- 2. CARTRIDGE -->
-<div class="section"><h2>KFT Cartridge <span style="color:#0a7a42;font-size:14px">View All ›</span></h2><div class="products">
-<div class="card"><img src="kft-cartridge-1.jpeg"><h4>KFT Cartridge - 1</h4><div><span class="price">৳ 850</span><span class="old">৳ 950</span></div><button>Add to Cart</button></div>
-<div class="card"><img src="kft-cartridge-2.jpeg"><h4>KFT Cartridge - 2</h4><div><span class="price">৳ 850</span><span class="old">৳ 950</span></div><button>Add to Cart</button></div>
+<!-- GP - SUDHU 15 -->
+<div class="section" id="gp"><h2>GP Point - শুধু 15 নাম্বার</h2><div class="products">
+<div class="card"><a href="https://wa.me/8801631268054?text=GP%20Point%2015%20nite%20chai"><img src="gp.jpg"></a><h4><a href="https://wa.me/8801631268054?text=GP%20Point%2015%20nite%20chai">GP Point 15 - 2%</a></h4><div><span class="price">৳ 350</span><span class="old">৳ 450</span></div><a class="buy" href="https://wa.me/8801631268054?text=GP%20Point%2015%20nite%20chai">💬 BUY NOW - WhatsApp</a></div>
 </div></div>
 
-<!-- 3. PLEX V -->
-<div class="section"><h2>Plex V <span style="color:#0a7a42;font-size:14px">View All ›</span></h2><div class="products">
-<div class="card"><img src="plex-v-1.jpeg"><h4>Plex V - 1</h4><div><span class="price">৳ 1250</span><span class="old">৳ 1450</span></div><button>Add to Cart</button></div>
-<div class="card"><img src="plex-v-2.jpeg"><h4>Plex V - 2</h4><div><span class="price">৳ 1250</span><span class="old">৳ 1450</span></div><button>Add to Cart</button></div>
+<div class="section" id="cartridge"><h2>KFT Cartridge</h2><div class="products">
+<div class="card"><a href="https://wa.me/8801631268054?text=KFT%20Cartridge%201%20nite%20chai"><img src="kft-cartridge-1.jpeg"></a><h4><a href="https://wa.me/8801631268054?text=KFT%20Cartridge%201%20nite%20chai">KFT Cartridge - 1</a></h4><div><span class="price">৳ 850</span></div><a class="buy" href="https://wa.me/8801631268054?text=KFT%20Cartridge%201%20nite%20chai">💬 BUY NOW</a></div>
+<div class="card"><a href="https://wa.me/8801631268054?text=KFT%20Cartridge%202%20nite%20chai"><img src="kft-cartridge-2.jpeg"></a><h4><a href="https://wa.me/8801631268054?text=KFT%20Cartridge%202%20nite%20chai">KFT Cartridge - 2</a></h4><div><span class="price">৳ 850</span></div><a class="buy" href="https://wa.me/8801631268054?text=KFT%20Cartridge%202%20nite%20chai">💬 BUY NOW</a></div>
 </div></div>
 
-<!-- 4. RUNYES X-RAY -->
-<div class="section"><h2>Runyes X-Ray Machine <span style="color:#0a7a42;font-size:14px">View All ›</span></h2><div class="products">
-<div class="card"><img src="runyes-xray-main.jpg.jpeg"><h4>Runyes X-Ray - Main Unit</h4><div><span class="price">৳ 85,000</span></div><button>Add to Cart</button></div>
-<div class="card"><img src="runyes-xray-fullset.jpg.jpeg"><h4>Runyes X-Ray - Full Set</h4><div><span class="price">৳ 95,000</span></div><button>Add to Cart</button></div>
-<div class="card"><img src="runyes-xray-display.jpg.jpeg"><h4>Runyes X-Ray - Display</h4><div><span class="price">৳ 95,000</span></div><button>Add to Cart</button></div>
+<div class="section" id="plex"><h2>Plex V</h2><div class="products">
+<div class="card"><a href="https://wa.me/8801631268054?text=Plex%20V%201%20nite%20chai"><img src="plex-v-1.jpeg"></a><h4><a href="https://wa.me/8801631268054?text=Plex%20V%201%20nite%20chai">Plex V - 1</a></h4><div><span class="price">৳ 1250</span></div><a class="buy" href="https://wa.me/8801631268054?text=Plex%20V%201%20nite%20chai">💬 BUY NOW</a></div>
+<div class="card"><a href="https://wa.me/8801631268054?text=Plex%20V%202%20nite%20chai"><img src="plex-v-2.jpeg"></a><h4><a href="https://wa.me/8801631268054?text=Plex%20V%202%20nite%20chai">Plex V - 2</a></h4><div><span class="price">৳ 1250</span></div><a class="buy" href="https://wa.me/8801631268054?text=Plex%20V%202%20nite%20chai">💬 BUY NOW</a></div>
 </div></div>
 
-<!-- 5. ONNANNO -->
-<div class="section"><h2>More Dental Products <span style="color:#0a7a42;font-size:14px">View All ›</span></h2><div class="products">
-<div class="card"><img src="hygedent.jpg"><h4>Hygedent</h4><div><span class="price">৳ 650</span></div><button>Add to Cart</button></div>
-<div class="card"><img src="tropical.jpg"><h4>Tropical Product</h4><div><span class="price">৳ 550</span></div><button>Add to Cart</button></div>
-<div class="card"><img src="images%20(2).jpeg"><h4>Dental Product</h4><div><span class="price">৳ 550</span></div><button>Add to Cart</button></div>
+<div class="section" id="xray"><h2>Runyes X-Ray Machine</h2><div class="products">
+<div class="card"><a href="https://wa.me/8801631268054?text=Runyes%20X-Ray%20Main%20nite%20chai"><img src="runyes-xray-main.jpg.jpeg"></a><h4><a href="https://wa.me/8801631268054?text=Runyes%20X-Ray%20Main%20nite%20chai">Runyes X-Ray Main</a></h4><div><span class="price">৳ 85,000</span></div><a class="buy" href="https://wa.me/8801631268054?text=Runyes%20X-Ray%20Main%20nite%20chai">💬 BUY NOW</a></div>
+<div class="card"><a href="https://wa.me/8801631268054?text=Runyes%20X-Ray%20Full%20Set%20nite%20chai"><img src="runyes-xray-fullset.jpg.jpeg"></a><h4><a href="https://wa.me/8801631268054?text=Runyes%20X-Ray%20Full%20Set%20nite%20chai">Runyes X-Ray Full Set</a></h4><div><span class="price">৳ 95,000</span></div><a class="buy" href="https://wa.me/8801631268054?text=Runyes%20X-Ray%20Full%20Set%20nite%20chai">💬 BUY NOW</a></div>
+<div class="card"><a href="https://wa.me/8801631268054?text=Runyes%20X-Ray%20Display%20nite%20chai"><img src="runyes-xray-display.jpg.jpeg"></a><h4><a href="https://wa.me/8801631268054?text=Runyes%20X-Ray%20Display%20nite%20chai">Runyes X-Ray Display</a></h4><div><span class="price">৳ 95,000</span></div><a class="buy" href="https://wa.me/8801631268054?text=Runyes%20X-Ray%20Display%20nite%20chai">💬 BUY NOW</a></div>
+</div></div>
+
+<div class="section" id="more"><h2>More Products</h2><div class="products">
+<div class="card"><a href="https://wa.me/8801631268054?text=Hygedent%20nite%20chai"><img src="hygedent.jpg"></a><h4><a href="https://wa.me/8801631268054?text=Hygedent%20nite%20chai">Hygedent</a></h4><div><span class="price">৳ 650</span></div><a class="buy" href="https://wa.me/8801631268054?text=Hygedent%20nite%20chai">💬 BUY NOW</a></div>
+<div class="card"><a href="https://wa.me/8801631268054?text=Tropical%20nite%20chai"><img src="tropical.jpg"></a><h4><a href="https://wa.me/8801631268054?text=Tropical%20nite%20chai">Tropical</a></h4><div><span class="price">৳ 550</span></div><a class="buy" href="https://wa.me/8801631268054?text=Tropical%20nite%20chai">💬 BUY NOW</a></div>
+<div class="card"><a href="https://wa.me/8801631268054?text=Dental%20Product%20nite%20chai"><img src="images%20(2).jpeg"></a><h4><a href="https://wa.me/8801631268054?text=Dental%20Product%20nite%20chai">Dental Product</a></h4><div><span class="price">৳ 550</span></div><a class="buy" href="https://wa.me/8801631268054?text=Dental%20Product%20nite%20chai">💬 BUY NOW</a></div>
 </div></div>
 
 </div></div>
-<div class="float-side"><a class="wa" href="https://wa.me/8801631268054" target="_blank">💬<span>WhatsApp Order</span></a><a class="msg" href="https://m.me/kftdentamax" target="_blank">💙<span>Messenger</span></a><a class="call" href="tel:+8801631268054">📞<span>Call Now</span></a></div>
-<div class="footer">© 2026 KFT DENTAMAX INTERNATIONAL | Sadullahpur, Rangpur | 📞 01631-268054 | SMILE EVERY DAY</div>
+<div class="float-side"><a class="wa" href="https://wa.me/8801631268054">💬</a><a class="msg" href="https://m.me/kftdentamax">💙</a><a class="call" href="tel:+8801631268054">📞</a></div>
+<div class="footer">© 2026 KFT DENTAMAX INTERNATIONAL | Sadullahpur, Rangpur | 📞 01631-268054</div>
 </body>
 </html>
